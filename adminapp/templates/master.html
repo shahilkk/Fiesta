@@ -26,8 +26,12 @@
 
 
     <!-- estimate -->
-   
-     <!-- end etimate -->
+    <!-- end etimate -->
+
+
+    <!-- invoice grid -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap-datetimepicker.min.css' %}">
+    <!-- end invoice grid -->
 
 
     
@@ -93,7 +97,7 @@
                                     class="menu-arrow"></span></a>
                             <ul>
                                 <li><a href="invoices.html">Invoices List</a></li>
-                                <li><a href="invoice-grid.html">Invoices Grid</a></li>
+                                <li><a href="/admin/invoicegrid">Invoices Grid</a></li>
                                 <li><a href="add-invoice.html">Add Invoices</a></li>
                                 <li><a href="edit-invoice.html">Edit Invoices</a></li>
                                 <li><a href="view-invoice.html">Invoices Details</a></li>
@@ -283,9 +287,15 @@
     <!-- end add customer -->
 
 
-<!-- estimate -->
+    <!-- estimate -->
+    <!-- end estimate -->
 
-<!-- end estimate -->
+    <!-- invoicegrid -->
+
+    <script src="{% static 'plugins/moment/moment.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap-datetimepicker.min.js' %}"></script>
+
+    <!-- endinvoicegrid -->
     
 </body>
 

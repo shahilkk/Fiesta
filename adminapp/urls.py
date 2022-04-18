@@ -8,5 +8,6 @@ urlpatterns = [
     path('customer',views.customer,name="customer"),
     path('addcustomer',views.addcustomer,name="addcustomer"),
     path('estimate',views.Estimate,name="estimate"),
+    path('invoicegrid',views.invoicegrid,name="invoicegrid"),
 
 ]
