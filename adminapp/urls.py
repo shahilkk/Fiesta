@@ -15,6 +15,11 @@ urlpatterns = [
     path('addinvoice',views.addinvoice,name="addinvoice"),
     path('invoicedetails',views.invoicedetails,name="invoicedetails"),
     path('invoicesettings',views.invoicesettings,name="invoicesettings"),
-
-
+    path('editestimate',views.editestimate,name="editestimate"),
+    path('payment',views.payment,name="payment"),
+    path('addpayment',views.addpayment,name="addpayment"),
+    path('expenses',views.expenses,name="expenses"),
+    path('addexpenses',views.addexpenses,name="addexpenses"),
+    path('profit',views.profit,name="profit"),
+    path('addprofit',views.addprofit,name="addprofit"),
 ]
