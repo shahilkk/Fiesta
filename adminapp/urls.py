@@ -11,5 +11,6 @@ urlpatterns = [
     path('invoicegrid',views.invoicegrid,name="invoicegrid"),
     path('invoiceList',views.invoiceList,name="invoiceList"),
     path('addinvoice',views.addinvoice,name="addinvoice"),
+    path('invoicedetails',views.invoicedetails,name="invoicedetails"),
 
 ]

@@ -32,4 +32,8 @@ def invoiceList(req):
 def addinvoice(req):
     return render(req,'addinvoice.html')
 
+
+def invoicedetails(req):
+    return render(req,'invoicedetails.html')    
+
       
