@@ -10,7 +10,11 @@ def index(req):
     return render(req,'index.html')  
 
 def customer(req):
-    return render(req,'customer.html') 
+    return render(req,'customer.html')
+
+
+def marketingstaff(req):
+    return render(req,'marketingstaff.html')      
 
 
 def addcustomer(req):
@@ -34,6 +38,11 @@ def addinvoice(req):
 
 
 def invoicedetails(req):
-    return render(req,'invoicedetails.html')    
+    return render(req,'invoicedetails.html') 
+
+
+def editinvoice(req):
+    return render(req,'editinvoice.html') 
+
 
       
