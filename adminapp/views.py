@@ -18,4 +18,9 @@ def addcustomer(req):
 
 
 def Estimate(req):
-    return render(req,'Estimate.html')        
+    return render(req,'Estimate.html')  
+
+def invoiceList(req):
+    return render(req,'invoiceList.html')  
+
+      
