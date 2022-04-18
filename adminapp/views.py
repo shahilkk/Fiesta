@@ -44,14 +44,44 @@ def invoicedetails(req):
 def editinvoice(req):
     return render(req,'editinvoice.html') 
 
+
 def invoicesettings(req):
     return render(req,'invoicesettings.html') 
 
 def products(req):
     return render(req,'products.html') 
 
-def productcatogory(req):
-    return render(req,'productcatogory.html') 
 
 
+def editestimate(req):
+    return render(req,'editestimate.html')    
+
+
+
+def payment(req):
+    return render(req,'payment.html')  
+
+
+def addpayment(req):
+    return render(req,'addpayment.html')   
+
+
+
+def expenses(req):
+    return render(req,'expenses.html')          
+
+
+
+def addexpenses(req):
+    return render(req,'addexpence.html')
+
+
+
+def profit(req):
+    return render(req,'profit.html')          
+
+
+
+def addprofit(req):
+    return render(req,'addprofit.html')
       
