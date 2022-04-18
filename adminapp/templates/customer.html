@@ -11,7 +11,7 @@
                 <div class="col">
                     <h3 class="page-title">Customers</h3>
                     <ul class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="index.html">Dashboard</a>
+                        <li class="breadcrumb-item"><a href="/admin/index">Dashboard</a>
                         </li>
                         <li class="breadcrumb-item active">Customers</li>
                     </ul>
@@ -396,8 +396,17 @@
     </div>
 </div>
 
-
-<script src="{% static 'js/script.js' %}"></script>
+<!-- <script>
+    if ($('.datatable').length > 0) {
+		$('.datatable').DataTable({
+			language: {
+				search: '<i class="fas fa-search"></i>',
+				searchPlaceholder: "Search"
+			  }
+		});
+	}
+</script> -->
+<!-- <script src="{% static 'js/script.js' %}"></script> -->
 
 
 {% endblock %}

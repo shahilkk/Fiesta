@@ -28,6 +28,7 @@
     <!-- estimate -->
     <!-- end etimate -->
 
+
     <!-- invoicelist -->
     <link rel="stylesheet" href="assets/css/bootstrap-datetimepicker.min.css">
     <!-- invoice list -->
@@ -56,14 +57,14 @@
         <div class="header header-one">
 
             <div class="header-left header-left-one">
-                <a href="index.html" class="logo">
-                    <img src="{% static 'img/logo.png' %}" alt="Logo">
+                <a href="/admin/index" class="logo">
+                    <img src="{% static 'img/logo/img2.jpeg' %}" alt="Logo">
                 </a>
-                <a href="index.html" class="white-logo">
-                    <img src="{% static 'img/logo-white.png' %}" alt="Logo">
+                <a href="/admin/index" class="white-logo">
+                    <img src="{% static 'img/logo/img2.jpeg' %}" alt="Logo">
                 </a>
-                <a href="index.html" class="logo logo-small">
-                    <img src="{% static 'img/logo-small.png' %}" alt="Logo" width="30" height="30">
+                <a href="/admin/index" class="logo logo-small">
+                    <img src="{% static 'img/logo/img1.jpeg' %}" alt="Logo" width="30" height="30">
                 </a>
             </div>
 
@@ -112,8 +113,8 @@
                                     title="fa fa-file-text"></i><span>Estimates</span></a>
                         </li>
                         <li class="submenu">
-                            <a href="#"><i data-feather="clipboard"></i> <span> Invoices</span> <span
-                                    class="menu-arrow"></span></a>
+                            <a href="#"><i class="fa fa-clipboard" data-bs-toggle="tooltip"
+                                title="fa fa-clipboard"></i><span>Invoices</span></a>
                             <ul>
                                 <li><a href="/admin/invoiceList">Invoices List</a></li>
                                 <li><a href="/admin/invoicegrid">Invoices Grid</a></li>
@@ -124,7 +125,8 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="/admin/products"><i data-feather="star"></i> <span>Products</span></a>
+                            <a href="/admin/products"><i class="fa fa-cutlery" data-bs-toggle="tooltip"
+                                title="fa fa-cutlery"></i> <span>Products</span></a>
                         </li>
                         <li>
                             <a href="/admin/payment"><i data-feather="credit-card"></i> <span>Payments</span></a>
