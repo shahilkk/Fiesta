@@ -35,5 +35,8 @@ def addinvoice(req):
 def editinvoice(req):
     return render(req,'editinvoice.html') 
 
+def invoicesettings(req):
+    return render(req,'invoicesettings.html') 
+
 
       

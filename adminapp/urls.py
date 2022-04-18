@@ -12,6 +12,7 @@ urlpatterns = [
     path('invoiceList',views.invoiceList,name="invoiceList"),
     path('editinvoice',views.editinvoice,name="editinvoice"),
     path('addinvoice',views.addinvoice,name="addinvoice"),
-    
+    path('invoicesettings',views.invoicesettings,name="invoicesettings"),
+
 
 ]
