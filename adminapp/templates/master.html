@@ -125,12 +125,8 @@
                             </ul>
                         </li>
                         <li>
-<<<<<<< HEAD
-                            <a href="/admin/products"><i class=" fa fa-cutlery"></i> <span>Products</span></a>
-=======
-                            <a href="/admin/products"><i class="fa fa-cutlery" data-bs-toggle="tooltip"
+                            <a href="/admin/products"><i class="fa fa-coffee" data-bs-toggle="tooltip"
                                 title="fa fa-cutlery"></i> <span>Products</span></a>
->>>>>>> 77f13a9e951747345d44f874672278914716480a
                         </li>
                         <li>
                             <a href="/admin/payment"><i  class="fa fa-credit-card"></i> <span>Payments</span></a>
@@ -335,6 +331,13 @@
     <!-- end invoice settings -->
 
 
+    <script>
+        $(document).ready(function(){
+$('#toggle li').on('click', function(){
+$(this).removeClass('open').addClass('open');
+});
+});
+    </script>
 
 </body>
 
