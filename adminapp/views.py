@@ -28,4 +28,8 @@ def invoicegrid(req):
 def invoiceList(req):
     return render(req,'invoiceList.html')  
 
+def editinvoice(req):
+    return render(req,'editinvoice.html') 
+
+
       
