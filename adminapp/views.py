@@ -23,3 +23,9 @@ def Estimate(req):
 
 def invoicegrid(req):
     return render(req,'invoicegrid.html')        
+  
+
+def invoiceList(req):
+    return render(req,'invoiceList.html')  
+
+      

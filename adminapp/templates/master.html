@@ -28,13 +28,18 @@
     <!-- estimate -->
     <!-- end etimate -->
 
+    <!-- invoicelist -->
+    <link rel="stylesheet" href="assets/css/bootstrap-datetimepicker.min.css">
+    <!-- invoice list -->
 
     <!-- invoice grid -->
-    <link rel="stylesheet" href="{% static 'css/bootstrap-datetimepicker.min.css' %}">
     <!-- end invoice grid -->
 
 
-    
+
+
+
+
 </head>
 
 <body class="nk-body bg-lighter npc-default has-sidebar no-touch nk-nio-theme">
@@ -74,7 +79,7 @@
             </a>
 
 
-           
+
         </div>
 
 
@@ -96,7 +101,7 @@
                             <a href="#"><i data-feather="clipboard"></i> <span> Invoices</span> <span
                                     class="menu-arrow"></span></a>
                             <ul>
-                                <li><a href="invoices.html">Invoices List</a></li>
+                                <li><a href="/admin/invoiceList">Invoices List</a></li>
                                 <li><a href="/admin/invoicegrid">Invoices Grid</a></li>
                                 <li><a href="add-invoice.html">Add Invoices</a></li>
                                 <li><a href="edit-invoice.html">Edit Invoices</a></li>
@@ -255,7 +260,7 @@
         </div>
 
 
-       
+
 
         {% block content %}
         {% endblock %}
@@ -272,7 +277,7 @@
     <script src="{% static 'plugins/apexchart/chart-data.js' %}"></script>
     <script src="{% static 'js/script.js' %}"></script>
     <!-- end index -->
-  
+
 
     <!-- customer -->
     <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
@@ -290,13 +295,18 @@
     <!-- estimate -->
     <!-- end estimate -->
 
-    <!-- invoicegrid -->
-
+    <!-- invoice list -->
     <script src="{% static 'plugins/moment/moment.min.js' %}"></script>
     <script src="{% static 'js/bootstrap-datetimepicker.min.js' %}"></script>
+    <!-- end invoice list -->
 
+
+
+    <!-- invoicegrid -->
     <!-- endinvoicegrid -->
-    
+
+
+
 </body>
 
 </html>
