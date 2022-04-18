@@ -10,4 +10,8 @@ def index(req):
     return render(req,'index.html')  
 
 def customer(req):
-    return render(req,'customer.html')      
+    return render(req,'customer.html') 
+
+
+def addcustomer(req):
+    return render(req,'addcustomer.html')         
