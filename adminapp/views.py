@@ -7,101 +7,130 @@ def master(req):
     return render(req,'master.html')
 
 def index(req):
-    return render(req,'index.html')  
+    context={"is_index":True}
+    return render(req,'index.html',context)  
 
 def customer(req):
-    return render(req,'customer.html')
-
-
-def marketingstaff(req):
-    return render(req,'marketingstaff.html')      
+    context={"is_customer":True}
+    return render(req,'customer.html',context)
 
 
 def addcustomer(req):
-    return render(req,'addcustomer.html')  
+    context={"is_customer":True}
+    return render(req,'addcustomer.html',context) 
+
+def editcustomer(req):
+    context={"is_customer":True}
+    return render(req,'editcustomer.html',context)       
+
+
+def marketingstaff(req):
+    context={"is_marketingstaff":True}
+    return render(req,'marketingstaff.html',context)      
+
+
 
 
 def Estimate(req):
-    return render(req,'Estimate.html')    
+    context={"is_estimate":True}
+    return render(req,'Estimate.html',context)   
 
 
-def invoicegrid(req):
-    return render(req,'invoicegrid.html')        
-  
+def addestimate(req):
+    context={"is_estimate":True}
+    return render(req,'addestimate.html',context) 
 
-def invoiceList(req):
-    return render(req,'invoiceList.html') 
-
-
-def addinvoice(req):
-    return render(req,'addinvoice.html')
-
-
-def invoicedetails(req):
-    return render(req,'invoicedetails.html') 
-
-
-def editinvoice(req):
-    return render(req,'editinvoice.html') 
-
-
-def invoicesettings(req):
-    return render(req,'invoicesettings.html') 
-
-def products(req):
-    return render(req,'products.html') 
 
 
 
 def editestimate(req):
-    return render(req,'editestimate.html')    
+    context={"is_estimate":True}
+    return render(req,'editestimate.html',context)   
 
+
+def viewestimate(req):
+    context={"is_estimate":True}
+    return render(req,'viewestimate.html',context) 
+
+
+
+def invoicegrid(req):
+    context={"is_invoice":True}
+    return render(req,'invoicegrid.html',context)        
+  
+
+def invoiceList(req):
+    context={"is_invoice":True}
+    return render(req,'invoiceList.html',context) 
+
+
+def addinvoice(req):
+    context={"is_invoice":True}
+    return render(req,'addinvoice.html',context)
+
+
+def invoicedetails(req):
+    context={"is_invoice":True}
+    return render(req,'invoicedetails.html',context) 
+
+
+def editinvoice(req):
+    context={"is_invoice":True}
+    return render(req,'editinvoice.html',context) 
+
+
+def invoicesettings(req):
+    context={"is_invoice":True}
+    return render(req,'invoicesettings.html',context) 
+
+def products(req):
+    context={"is_product":True}
+    return render(req,'products.html',context) 
+
+
+     
 
 
 def payment(req):
-    return render(req,'payment.html')  
+    context={"is_payment":True}
+    return render(req,'payment.html',context)  
 
 
 def addpayment(req):
-    return render(req,'addpayment.html')   
+    context={"is_payment":True}
+    return render(req,'addpayment.html',context)   
 
 
 
 def expenses(req):
-    return render(req,'expenses.html')          
+    context={"is_expenses":True}
+    return render(req,'expenses.html',context)          
 
 
 
 def addexpenses(req):
-    return render(req,'addexpence.html')
+    context={"is_expenses":True}
+    return render(req,'addexpence.html',context)
 
 
 
 def profit(req):
-    return render(req,'profit.html')          
+    context={"is_profit":True}
+    return render(req,'profit.html',context)          
 
 
 
 def addprofit(req):
-    return render(req,'addprofit.html')
+    context={"is_profit":True}
+    return render(req,'addprofit.html',context)
 
 
 
-def viewestimate(req):
-    return render(req,'viewestimate.html')    
+   
 
 
-def editcustomer(req):
-    return render(req,'editcustomer.html')
 
 
-def addestimate(req):
-    return render(req,'addestimate.html')
-
-def calender(req):
-    return render(req,'calender.html')
 
 
-def banksettings(req):
-    return render(req,'banksettings.html')
       

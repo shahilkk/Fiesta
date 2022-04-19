@@ -26,6 +26,5 @@ urlpatterns = [
     path('viewestimate',views.viewestimate,name="viewestimate"),
     path('editcustomer',views.editcustomer,name="editcustomer"),
     path('addestimate',views.addestimate,name="addestimate"),
-    path('editcustomer',views.editcustomer,name="editcustomer"),
    
 ]
