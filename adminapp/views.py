@@ -84,4 +84,7 @@ def profit(req):
 
 def addprofit(req):
     return render(req,'addprofit.html')
+
+def editcustomer(req):
+    return render(req,'editcustomer.html')
       

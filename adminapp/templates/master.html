@@ -44,6 +44,10 @@
     <!-- end invoice settings -->
 
 
+    <!-- edit customer -->
+    <!-- edit customer -->
+
+
 
 
 
@@ -332,13 +336,16 @@
     <!-- invoice settings -->
     <!-- end invoice settings -->
 
+    <!-- editcustomer -->
+    <!-- edit customer -->
+
 
     <script>
-        $(document).ready(function(){
-$('#toggle li').on('click', function(){
-$(this).removeClass('open').addClass('open');
-});
-});
+        $(document).ready(function () {
+            $('#toggle li').on('click', function () {
+                $(this).removeClass('open').addClass('open');
+            });
+        });
     </script>
 
 
@@ -443,16 +450,27 @@ $(this).removeClass('open').addClass('open');
 
 
         // selectbox
-        $('.app-listing .selectBox').on("click", function() {
-        $(this).parent().find('#checkBoxes').fadeToggle();
-        $(this).parent().parent().siblings().find('#checkBoxes').fadeOut();
-    });
+        $('.app-listing .selectBox').on("click", function () {
+            $(this).parent().find('#checkBoxes').fadeToggle();
+            $(this).parent().parent().siblings().find('#checkBoxes').fadeOut();
+        });
 
-    $('.invoices-main-form .selectBox').on("click", function() {
-        $(this).parent().find('#checkBoxes-one').fadeToggle();
-        $(this).parent().parent().siblings().find('#checkBoxes-one').fadeOut();
-    });
+        $('.invoices-main-form .selectBox').on("click", function () {
+            $(this).parent().find('#checkBoxes-one').fadeToggle();
+            $(this).parent().parent().siblings().find('#checkBoxes-one').fadeOut();
+        });
         // end selectbox
+
+
+
+
+        $(document).ready(function () {
+            $(".tab").click(function () {
+                $(".tab").removeClass("active");
+                // $(".tab").addClass("active"); // instead of this do the below 
+                $(this).addClass("active");
+            });
+        });
     </script>
 </body>
 
