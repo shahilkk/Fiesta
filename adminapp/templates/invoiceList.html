@@ -2,7 +2,7 @@
 {% block content %}
 {% load static %}
 
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 <div class="page-wrapper">
     <div class="content container-fluid">
@@ -36,7 +36,8 @@
                             <li>
                                 <div class="multipleSelection">
                                     <div class="selectBox">
-                                        <p class="mb-0"> <i class="fa fa-user me-1 select-icon"></i> Select User</p>
+                                        <p class="mb-0"><i data-feather="user-plus" class="me-1 select-icon"></i> Select
+                                            User</p>
                                         <span class="down-icon"><i data-feather="chevron-down"></i></span>
                                     </div>
                                     <div id="checkBoxes">
@@ -84,10 +85,10 @@
                             </li>
                             <li>
                                 <div class="multipleSelection">
-                                     <div class="selectBox">
-                                        <p class="mb-0"><i class=" fa fa-calendar me-1 select-icon"></i>
+                                    <div class="selectBox">
+                                        <p class="mb-0"><i data-feather="calendar" class="me-1 select-icon"></i>
                                             Select Date</p>
-                                        <span class="down-icon"><i class="fa fa-chevron-down"></i></span>
+                                        <span class="down-icon"><i data-feather="chevron-down"></i></span>
                                     </div>
                                     <div id="checkBoxes">
                                         <form action="#">
@@ -123,8 +124,8 @@
                             <li>
                                 <div class="multipleSelection">
                                     <div class="selectBox">
-                                        <p class="mb-0"><i 
-                                            class=" fa fa-window-maximize me-1 select-icon"></i> Select Status</p>
+                                        <p class="mb-0"><i data-feather="book-open" class="me-1 select-icon"></i> Select
+                                            Status</p>
                                         <span class="down-icon"><i data-feather="chevron-down"></i></span>
                                     </div>
                                     <div id="checkBoxes">
@@ -165,9 +166,9 @@
                             <li>
                                 <div class="multipleSelection">
                                     <div class="selectBox">
-                                        <p class="mb-0"><i  class=" fa fa-bookmark me-1 select-icon"></i>
+                                        <p class="mb-0"><i data-feather="bookmark" class="me-1 select-icon"></i>
                                             By Category</p>
-                                        <span class="down-icon"><i class="fa fa-chevron-down"></i></span>
+                                        <span class="down-icon"><i data-feather="chevron-down"></i></span>
                                     </div>
                                     <div id="checkBoxes">
                                         <form action="#">
@@ -234,12 +235,13 @@
                             <div class="invoices-tabs">
                                 <ul id="toggle">
                                     <li class="font-regular"><a href="#" id="allinvoice" >All Invoice</a></li>
-                                    <li class="font-regular"><a href="#" id="billed">Billed</a></li>
+                                    <li class=""><a href="#" id="billed">Billed</a></li>
                                     <li><a href="#" id="advanced">Advanced</a></li>
                                     <li><a href="#" id="parially">Parially Paid</a></li>
                                     <li><a href="#" id="closed">Closed</a></li>
                                     <!-- <li><a href="#" id="cancelled">Cancelled</a></li> -->
                                 </ul>
+                              
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-4">
@@ -318,258 +320,701 @@
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="card card-table">
-                    <div class="card-body">
-                        <div class="table-responsive">
-                            <table class="table table-stripped table-hover datatable">
-                                <thead class="thead-light">
-                                    <tr>
-                                        <th>Invoice ID</th>
-                                        <th>Category</th>
-                                        <th>Created on</th>
-                                        <th>Invoice to</th>
-                                        <th>Amount</th>
-                                        <th>Due date</th>
-                                        <th>Status</th>
-                                        <th class="text-end">Action</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>
-                                            <label class="custom_check">
-                                                <input type="checkbox" name="invoice">
-                                                <span class="checkmark"></span>
-                                            </label>
-                                            <a href="view-invoice.html" class="invoice-link">IN093439#@09</a>
-                                        </td>
-                                        <td>Advertising</td>
-                                        <td>16 Mar 2022</td>
-                                        <td>
-                                            <h2 class="table-avatar">
-                                                <a href="profile.html"><img
-                                                        class="avatar avatar-sm me-2 avatar-img rounded-circle"
-                                                        src="assets/img/profiles/avatar-04.jpg"
-                                                        alt="User Image"> Barbara Moore</a>
-                                            </h2>
-                                        </td>
-                                        <td class="text-primary">$1,54,220</td>
-                                        <td>23 Mar 2022</td>
-                                        <td><span class="badge bg-success-light">Paid</span></td>
-                                        <td class="text-end">
-                                            <div class="dropdown dropdown-action">
-                                                <a href="#" class="action-icon dropdown-toggle"
-                                                    data-bs-toggle="dropdown" aria-expanded="false"><i
-                                                        class="fas fa-ellipsis-v"></i></a>
-                                                <div class="dropdown-menu dropdown-menu-end">
-                                                    <a class="dropdown-item" href="edit-invoice.html"><i
-                                                            class="far fa-edit me-2"></i>Edit</a>
-                                                    <a class="dropdown-item" href="view-invoice.html"><i
-                                                            class="far fa-eye me-2"></i>View</a>
-                                                    <a class="dropdown-item" href="javascript:void(0);"><i
-                                                            class="far fa-trash-alt me-2"></i>Delete</a>
-                                                    <a class="dropdown-item" href="javascript:void(0);"><i
-                                                            class="far fa-check-circle me-2"></i>Mark as
-                                                        sent</a>
-                                                    <a class="dropdown-item" href="javascript:void(0);"><i
-                                                            class="far fa-paper-plane me-2"></i>Send Invoice</a>
-                                                    <a class="dropdown-item" href="javascript:void(0);"><i
-                                                            class="far fa-copy me-2"></i>Clone Invoice</a>
+        <!-- all invoice -->
+        <div id="viewallinvoice" style="display: none;">
+            <h3>all in</h3>
+            <div class="row"  >
+                <div class="col-sm-12">
+                    <div class="card card-table">
+                        
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-stripped table-hover datatable">
+                                    <thead class="thead-light">
+                                        <tr>
+                                            <th>Invoice ID</th>
+                                            <th>Category</th>
+                                            <th>Created on</th>
+                                            <th>Invoice to</th>
+                                            <th>Amount</th>
+                                            <th>Due date</th>
+                                            <th>Status</th>
+                                            <th class="text-end">Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <label class="custom_check">
+                                                    <input type="checkbox" name="invoice">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                                <a href="/admin/invoicedetails" class="invoice-link">IN093439#@09</a>
+                                            </td>
+                                            <td>Advertising</td>
+                                            <td>16 Mar 2022</td>
+                                            <td>
+                                                <h2 class="table-avatar">
+                                                    Barbara Moore
+                                                </h2>
+                                            </td>
+                                            <td class="text-primary">$1,54,220</td>
+                                            <td>23 Mar 2022</td>
+                                            <td><span class="badge bg-success-light">Paid</span></td>
+                                            <td class="text-end">
+                                                <div class="dropdown dropdown-action">
+                                                    <a href="#" class="action-icon dropdown-toggle"
+                                                        data-bs-toggle="dropdown" aria-expanded="false"><i
+                                                            class="fas fa-ellipsis-v"></i></a>
+                                                    <div class="dropdown-menu dropdown-menu-end">
+                                                        <a class="dropdown-item" href="/admin/editinvoice"><i
+                                                                class="far fa-edit me-2"></i>Edit</a>
+                                                        <a class="dropdown-item" href="/admin/invoicedetails"><i
+                                                                class="far fa-eye me-2"></i>View</a>
+                                                        <a class="dropdown-item" href="javascript:void(0);"><i
+                                                                class="far fa-trash-alt me-2"></i>Delete</a>
+    
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <label class="custom_check">
-                                                <input type="checkbox" name="invoice">
-                                                <span class="checkmark"></span>
-                                            </label>
-                                            <a href="view-invoice.html" class="invoice-link">IN093439#@10</a>
-                                        </td>
-                                        <td>Food</td>
-                                        <td>14 Mar 2022</td>
-                                        <td>
-                                            <h2 class="table-avatar">
-                                                <a href="profile.html"><img
-                                                        class="avatar avatar-sm me-2 avatar-img rounded-circle"
-                                                        src="assets/img/profiles/avatar-06.jpg"
-                                                        alt="User Image"> Karlene Chaidez</a>
-                                            </h2>
-                                        </td>
-                                        <td class="text-primary">$1,222</td>
-                                        <td>18 Mar 2022</td>
-                                        <td><span class="badge bg-danger-light">Overdue</span></td>
-                                        <td class="text-end">
-                                            <div class="dropdown dropdown-action">
-                                                <a href="#" class="action-icon dropdown-toggle"
-                                                    data-bs-toggle="dropdown" aria-expanded="false"><i
-                                                        class="fas fa-ellipsis-v"></i></a>
-                                                <div class="dropdown-menu dropdown-menu-end">
-                                                    <a class="dropdown-item" href="edit-invoice.html"><i
-                                                            class="far fa-edit me-2"></i>Edit</a>
-                                                    <a class="dropdown-item" href="view-invoice.html"><i
-                                                            class="far fa-eye me-2"></i>View</a>
-                                                    <a class="dropdown-item" href="javascript:void(0);"><i
-                                                            class="far fa-trash-alt me-2"></i>Delete</a>
-                                                    <a class="dropdown-item" href="javascript:void(0);"><i
-                                                            class="far fa-check-circle me-2"></i>Mark as
-                                                        sent</a>
-                                                    <a class="dropdown-item" href="javascript:void(0);"><i
-                                                            class="far fa-paper-plane me-2"></i>Send Invoice</a>
-                                                    <a class="dropdown-item" href="javascript:void(0);"><i
-                                                            class="far fa-copy me-2"></i>Clone Invoice</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label class="custom_check">
+                                                    <input type="checkbox" name="invoice">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                                <a href="/admin/invoicedetails" class="invoice-link">IN093439#@10</a>
+                                            </td>
+                                            <td>Food</td>
+                                            <td>14 Mar 2022</td>
+                                            <td>
+                                                <h2 class="table-avatar">
+                                                    Karlene Chaidez
+                                                </h2>
+                                            </td>
+                                            <td class="text-primary">$1,222</td>
+                                            <td>18 Mar 2022</td>
+                                            <td><span class="badge bg-danger-light">Overdue</span></td>
+                                            <td class="text-end">
+                                                <div class="dropdown dropdown-action">
+                                                    <a href="#" class="action-icon dropdown-toggle"
+                                                        data-bs-toggle="dropdown" aria-expanded="false"><i
+                                                            class="fas fa-ellipsis-v"></i></a>
+                                                    <div class="dropdown-menu dropdown-menu-end">
+                                                        <a class="dropdown-item" href="/admin/editinvoice"><i
+                                                                class="far fa-edit me-2"></i>Edit</a>
+                                                        <a class="dropdown-item" href="/admin/invoicedetails"><i
+                                                                class="far fa-eye me-2"></i>View</a>
+                                                        <a class="dropdown-item" href="javascript:void(0);"><i
+                                                                class="far fa-trash-alt me-2"></i>Delete</a>
+    
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <label class="custom_check">
-                                                <input type="checkbox" name="invoice">
-                                                <span class="checkmark"></span>
-                                            </label>
-                                            <a href="view-invoice.html" class="invoice-link">IN093439#@11</a>
-                                        </td>
-                                        <td>Marketing</td>
-                                        <td>7 Mar 2022</td>
-                                        <td>
-                                            <h2 class="table-avatar">
-                                                <a href="profile.html"><img
-                                                        class="avatar avatar-sm me-2 avatar-img rounded-circle"
-                                                        src="assets/img/profiles/avatar-08.jpg"
-                                                        alt="User Image"> Russell Copeland</a>
-                                            </h2>
-                                        </td>
-                                        <td class="text-primary">$3,470</td>
-                                        <td>10 Mar 2022</td>
-                                        <td><span class="badge bg-primary-light">Cancelled</span></td>
-                                        <td class="text-end">
-                                            <div class="dropdown dropdown-action">
-                                                <a href="#" class="action-icon dropdown-toggle"
-                                                    data-bs-toggle="dropdown" aria-expanded="false"><i
-                                                        class="fas fa-ellipsis-v"></i></a>
-                                                <div class="dropdown-menu dropdown-menu-end">
-                                                    <a class="dropdown-item" href="edit-invoice.html"><i
-                                                            class="far fa-edit me-2"></i>Edit</a>
-                                                    <a class="dropdown-item" href="view-invoice.html"><i
-                                                            class="far fa-eye me-2"></i>View</a>
-                                                    <a class="dropdown-item" href="javascript:void(0);"><i
-                                                            class="far fa-trash-alt me-2"></i>Delete</a>
-                                                    <a class="dropdown-item" href="javascript:void(0);"><i
-                                                            class="far fa-check-circle me-2"></i>Mark as
-                                                        sent</a>
-                                                    <a class="dropdown-item" href="javascript:void(0);"><i
-                                                            class="far fa-paper-plane me-2"></i>Send Invoice</a>
-                                                    <a class="dropdown-item" href="javascript:void(0);"><i
-                                                            class="far fa-copy me-2"></i>Clone Invoice</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label class="custom_check">
+                                                    <input type="checkbox" name="invoice">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                                <a href="/admin/invoicedetails" class="invoice-link">IN093439#@11</a>
+                                            </td>
+                                            <td>Marketing</td>
+                                            <td>7 Mar 2022</td>
+                                            <td>
+                                                <h2 class="table-avatar">
+                                                    Russell Copeland
+                                                </h2>
+                                            </td>
+                                            <td class="text-primary">$3,470</td>
+                                            <td>10 Mar 2022</td>
+                                            <td><span class="badge bg-primary-light">Cancelled</span></td>
+                                            <td class="text-end">
+                                                <div class="dropdown dropdown-action">
+                                                    <a href="#" class="action-icon dropdown-toggle"
+                                                        data-bs-toggle="dropdown" aria-expanded="false"><i
+                                                            class="fas fa-ellipsis-v"></i></a>
+                                                    <div class="dropdown-menu dropdown-menu-end">
+                                                        <a class="dropdown-item" href="/admin/editinvoice"><i
+                                                                class="far fa-edit me-2"></i>Edit</a>
+                                                        <a class="dropdown-item" href="/admin/invoicedetails"><i
+                                                                class="far fa-eye me-2"></i>View</a>
+                                                        <a class="dropdown-item" href="javascript:void(0);"><i
+                                                                class="far fa-trash-alt me-2"></i>Delete</a>
+    
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <label class="custom_check">
-                                                <input type="checkbox" name="invoice">
-                                                <span class="checkmark"></span>
-                                            </label>
-                                            <a href="view-invoice.html" class="invoice-link">IN093439#@12</a>
-                                        </td>
-                                        <td>Repairs</td>
-                                        <td>24 Mar 2022</td>
-                                        <td>
-                                            <h2 class="table-avatar">
-                                                <a href="profile.html"><img
-                                                        class="avatar avatar-sm me-2 avatar-img rounded-circle"
-                                                        src="assets/img/profiles/avatar-10.jpg"
-                                                        alt="User Image"> Joseph Collins</a>
-                                            </h2>
-                                        </td>
-                                        <td class="text-primary">$8,265</td>
-                                        <td>30 Mar 2022</td>
-                                        <td><span class="badge bg-success-light">Paid</span></td>
-                                        <td class="text-end">
-                                            <div class="dropdown dropdown-action">
-                                                <a href="#" class="action-icon dropdown-toggle"
-                                                    data-bs-toggle="dropdown" aria-expanded="false"><i
-                                                        class="fas fa-ellipsis-v"></i></a>
-                                                <div class="dropdown-menu dropdown-menu-end">
-                                                    <a class="dropdown-item" href="edit-invoice.html"><i
-                                                            class="far fa-edit me-2"></i>Edit</a>
-                                                    <a class="dropdown-item" href="view-invoice.html"><i
-                                                            class="far fa-eye me-2"></i>View</a>
-                                                    <a class="dropdown-item" href="javascript:void(0);"><i
-                                                            class="far fa-trash-alt me-2"></i>Delete</a>
-                                                    <a class="dropdown-item" href="javascript:void(0);"><i
-                                                            class="far fa-check-circle me-2"></i>Mark as
-                                                        sent</a>
-                                                    <a class="dropdown-item" href="javascript:void(0);"><i
-                                                            class="far fa-paper-plane me-2"></i>Send Invoice</a>
-                                                    <a class="dropdown-item" href="javascript:void(0);"><i
-                                                            class="far fa-copy me-2"></i>Clone Invoice</a>
-                                                </div>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <label class="custom_check">
-                                                <input type="checkbox" name="invoice">
-                                                <span class="checkmark"></span>
-                                            </label>
-                                            <a href="view-invoice.html" class="invoice-link">IN093439#@13</a>
-                                        </td>
-                                        <td>Software</td>
-                                        <td>17 Mar 2022</td>
-                                        <td>
-                                            <h2 class="table-avatar">
-                                                <a href="profile.html"><img
-                                                        class="avatar avatar-sm me-2 avatar-img rounded-circle"
-                                                        src="assets/img/profiles/avatar-11.jpg"
-                                                        alt="User Image"> Jennifer Floyd</a>
-                                            </h2>
-                                        </td>
-                                        <td class="text-primary">$5,200</td>
-                                        <td>20 Mar 2022</td>
-                                        <td><span class="badge bg-danger-light">Overdue</span></td>
-                                        <td class="text-end">
-                                            <div class="dropdown dropdown-action">
-                                                <a href="#" class="action-icon dropdown-toggle"
-                                                    data-bs-toggle="dropdown" aria-expanded="false"><i
-                                                        class="fas fa-ellipsis-v"></i></a>
-                                                <div class="dropdown-menu dropdown-menu-end">
-                                                    <a class="dropdown-item" href="edit-invoice.html"><i
-                                                            class="far fa-edit me-2"></i>Edit</a>
-                                                    <a class="dropdown-item" href="view-invoice.html"><i
-                                                            class="far fa-eye me-2"></i>View</a>
-                                                    <a class="dropdown-item" href="javascript:void(0);"><i
-                                                            class="far fa-trash-alt me-2"></i>Delete</a>
-                                                    <a class="dropdown-item" href="javascript:void(0);"><i
-                                                            class="far fa-check-circle me-2"></i>Mark as
-                                                        sent</a>
-                                                    <a class="dropdown-item" href="javascript:void(0);"><i
-                                                            class="far fa-paper-plane me-2"></i>Send Invoice</a>
-                                                    <a class="dropdown-item" href="javascript:void(0);"><i
-                                                            class="far fa-copy me-2"></i>Clone Invoice</a>
-                                                </div>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                                            </td>
+                                        </tr>
+    
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <!-- end all invoice -->
+        <!-- billed -->
+        <div id="viewbilled" style="display: none;">
+            <h1>bill</h1>
+            <div class="row" >
+                
+                <div class="col-sm-12">
+                    <div class="card card-table">
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-stripped table-hover datatable">
+                                    <thead class="thead-light">
+                                        <tr>
+                                            <th>Invoice ID</th>
+                                            <th>Category</th>
+                                            <th>Created on</th>
+                                            <th>Invoice to</th>
+                                            <th>Amount</th>
+                                            <th>Due date</th>
+                                            <th>Status</th>
+                                            <th class="text-end">Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <label class="custom_check">
+                                                    <input type="checkbox" name="invoice">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                                <a href="/admin/invoicedetails" class="invoice-link">IN093439#@09</a>
+                                            </td>
+                                            <td>Advertising</td>
+                                            <td>16 Mar 2022</td>
+                                            <td>
+                                                <h2 class="table-avatar">
+                                                    Barbara Moore
+                                                </h2>
+                                            </td>
+                                            <td class="text-primary">$1,54,220</td>
+                                            <td>23 Mar 2022</td>
+                                            <td><span class="badge bg-success-light">Paid</span></td>
+                                            <td class="text-end">
+                                                <div class="dropdown dropdown-action">
+                                                    <a href="#" class="action-icon dropdown-toggle"
+                                                        data-bs-toggle="dropdown" aria-expanded="false"><i
+                                                            class="fas fa-ellipsis-v"></i></a>
+                                                    <div class="dropdown-menu dropdown-menu-end">
+                                                        <a class="dropdown-item" href="/admin/editinvoice"><i
+                                                                class="far fa-edit me-2"></i>Edit</a>
+                                                        <a class="dropdown-item" href="/admin/invoicedetails"><i
+                                                                class="far fa-eye me-2"></i>View</a>
+                                                        <a class="dropdown-item" href="javascript:void(0);"><i
+                                                                class="far fa-trash-alt me-2"></i>Delete</a>
+    
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label class="custom_check">
+                                                    <input type="checkbox" name="invoice">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                                <a href="/admin/invoicedetails" class="invoice-link">IN093439#@10</a>
+                                            </td>
+                                            <td>Food</td>
+                                            <td>14 Mar 2022</td>
+                                            <td>
+                                                <h2 class="table-avatar">
+                                                    Karlene Chaidez
+                                                </h2>
+                                            </td>
+                                            <td class="text-primary">$1,222</td>
+                                            <td>18 Mar 2022</td>
+                                            <td><span class="badge bg-danger-light">Overdue</span></td>
+                                            <td class="text-end">
+                                                <div class="dropdown dropdown-action">
+                                                    <a href="#" class="action-icon dropdown-toggle"
+                                                        data-bs-toggle="dropdown" aria-expanded="false"><i
+                                                            class="fas fa-ellipsis-v"></i></a>
+                                                    <div class="dropdown-menu dropdown-menu-end">
+                                                        <a class="dropdown-item" href="/admin/editinvoice"><i
+                                                                class="far fa-edit me-2"></i>Edit</a>
+                                                        <a class="dropdown-item" href="/admin/invoicedetails"><i
+                                                                class="far fa-eye me-2"></i>View</a>
+                                                        <a class="dropdown-item" href="javascript:void(0);"><i
+                                                                class="far fa-trash-alt me-2"></i>Delete</a>
+    
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label class="custom_check">
+                                                    <input type="checkbox" name="invoice">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                                <a href="/admin/invoicedetails" class="invoice-link">IN093439#@11</a>
+                                            </td>
+                                            <td>Marketing</td>
+                                            <td>7 Mar 2022</td>
+                                            <td>
+                                                <h2 class="table-avatar">
+                                                    Russell Copeland
+                                                </h2>
+                                            </td>
+                                            <td class="text-primary">$3,470</td>
+                                            <td>10 Mar 2022</td>
+                                            <td><span class="badge bg-primary-light">Cancelled</span></td>
+                                            <td class="text-end">
+                                                <div class="dropdown dropdown-action">
+                                                    <a href="#" class="action-icon dropdown-toggle"
+                                                        data-bs-toggle="dropdown" aria-expanded="false"><i
+                                                            class="fas fa-ellipsis-v"></i></a>
+                                                    <div class="dropdown-menu dropdown-menu-end">
+                                                        <a class="dropdown-item" href="/admin/editinvoice"><i
+                                                                class="far fa-edit me-2"></i>Edit</a>
+                                                        <a class="dropdown-item" href="/admin/invoicedetails"><i
+                                                                class="far fa-eye me-2"></i>View</a>
+                                                        <a class="dropdown-item" href="javascript:void(0);"><i
+                                                                class="far fa-trash-alt me-2"></i>Delete</a>
+    
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+    
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end billed -->
+
+        <!-- advanced -->
+        <div id="viewadvanced" style="display: none;">
+            <h3>Adv</h3>
+            <div class="row" >
+                <div class="col-sm-12">
+                    <div class="card card-table">
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-stripped table-hover datatable">
+                                    <thead class="thead-light">
+                                        <tr>
+                                            <th>Invoice ID</th>
+                                            <th>Category</th>
+                                            <th>Created on</th>
+                                            <th>Invoice to</th>
+                                            <th>Amount</th>
+                                            <th>Due date</th>
+                                            <th>Status</th>
+                                            <th class="text-end">Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <label class="custom_check">
+                                                    <input type="checkbox" name="invoice">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                                <a href="/admin/invoicedetails" class="invoice-link">IN093439#@09</a>
+                                            </td>
+                                            <td>Advertising</td>
+                                            <td>16 Mar 2022</td>
+                                            <td>
+                                                <h2 class="table-avatar">
+                                                    Barbara Moore
+                                                </h2>
+                                            </td>
+                                            <td class="text-primary">$1,54,220</td>
+                                            <td>23 Mar 2022</td>
+                                            <td><span class="badge bg-success-light">Paid</span></td>
+                                            <td class="text-end">
+                                                <div class="dropdown dropdown-action">
+                                                    <a href="#" class="action-icon dropdown-toggle"
+                                                        data-bs-toggle="dropdown" aria-expanded="false"><i
+                                                            class="fas fa-ellipsis-v"></i></a>
+                                                    <div class="dropdown-menu dropdown-menu-end">
+                                                        <a class="dropdown-item" href="/admin/editinvoice"><i
+                                                                class="far fa-edit me-2"></i>Edit</a>
+                                                        <a class="dropdown-item" href="/admin/invoicedetails"><i
+                                                                class="far fa-eye me-2"></i>View</a>
+                                                        <a class="dropdown-item" href="javascript:void(0);"><i
+                                                                class="far fa-trash-alt me-2"></i>Delete</a>
+    
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label class="custom_check">
+                                                    <input type="checkbox" name="invoice">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                                <a href="/admin/invoicedetails" class="invoice-link">IN093439#@10</a>
+                                            </td>
+                                            <td>Food</td>
+                                            <td>14 Mar 2022</td>
+                                            <td>
+                                                <h2 class="table-avatar">
+                                                    Karlene Chaidez
+                                                </h2>
+                                            </td>
+                                            <td class="text-primary">$1,222</td>
+                                            <td>18 Mar 2022</td>
+                                            <td><span class="badge bg-danger-light">Overdue</span></td>
+                                            <td class="text-end">
+                                                <div class="dropdown dropdown-action">
+                                                    <a href="#" class="action-icon dropdown-toggle"
+                                                        data-bs-toggle="dropdown" aria-expanded="false"><i
+                                                            class="fas fa-ellipsis-v"></i></a>
+                                                    <div class="dropdown-menu dropdown-menu-end">
+                                                        <a class="dropdown-item" href="/admin/editinvoice"><i
+                                                                class="far fa-edit me-2"></i>Edit</a>
+                                                        <a class="dropdown-item" href="/admin/invoicedetails"><i
+                                                                class="far fa-eye me-2"></i>View</a>
+                                                        <a class="dropdown-item" href="javascript:void(0);"><i
+                                                                class="far fa-trash-alt me-2"></i>Delete</a>
+    
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label class="custom_check">
+                                                    <input type="checkbox" name="invoice">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                                <a href="/admin/invoicedetails" class="invoice-link">IN093439#@11</a>
+                                            </td>
+                                            <td>Marketing</td>
+                                            <td>7 Mar 2022</td>
+                                            <td>
+                                                <h2 class="table-avatar">
+                                                    Russell Copeland
+                                                </h2>
+                                            </td>
+                                            <td class="text-primary">$3,470</td>
+                                            <td>10 Mar 2022</td>
+                                            <td><span class="badge bg-primary-light">Cancelled</span></td>
+                                            <td class="text-end">
+                                                <div class="dropdown dropdown-action">
+                                                    <a href="#" class="action-icon dropdown-toggle"
+                                                        data-bs-toggle="dropdown" aria-expanded="false"><i
+                                                            class="fas fa-ellipsis-v"></i></a>
+                                                    <div class="dropdown-menu dropdown-menu-end">
+                                                        <a class="dropdown-item" href="/admin/editinvoice"><i
+                                                                class="far fa-edit me-2"></i>Edit</a>
+                                                        <a class="dropdown-item" href="/admin/invoicedetails"><i
+                                                                class="far fa-eye me-2"></i>View</a>
+                                                        <a class="dropdown-item" href="javascript:void(0);"><i
+                                                                class="far fa-trash-alt me-2"></i>Delete</a>
+    
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+    
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end advanced -->
+        <!-- parially paid -->
+        <div  id="viewparially" style="display: none;">
+            <h2>par</h2>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="card card-table">
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-stripped table-hover datatable">
+                                    <thead class="thead-light">
+                                        <tr>
+                                            <th>Invoice ID</th>
+                                            <th>Category</th>
+                                            <th>Created on</th>
+                                            <th>Invoice to</th>
+                                            <th>Amount</th>
+                                            <th>Due date</th>
+                                            <th>Status</th>
+                                            <th class="text-end">Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <label class="custom_check">
+                                                    <input type="checkbox" name="invoice">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                                <a href="/admin/invoicedetails" class="invoice-link">IN093439#@09</a>
+                                            </td>
+                                            <td>Advertising</td>
+                                            <td>16 Mar 2022</td>
+                                            <td>
+                                                <h2 class="table-avatar">
+                                                    Barbara Moore
+                                                </h2>
+                                            </td>
+                                            <td class="text-primary">$1,54,220</td>
+                                            <td>23 Mar 2022</td>
+                                            <td><span class="badge bg-success-light">Paid</span></td>
+                                            <td class="text-end">
+                                                <div class="dropdown dropdown-action">
+                                                    <a href="#" class="action-icon dropdown-toggle"
+                                                        data-bs-toggle="dropdown" aria-expanded="false"><i
+                                                            class="fas fa-ellipsis-v"></i></a>
+                                                    <div class="dropdown-menu dropdown-menu-end">
+                                                        <a class="dropdown-item" href="/admin/editinvoice"><i
+                                                                class="far fa-edit me-2"></i>Edit</a>
+                                                        <a class="dropdown-item" href="/admin/invoicedetails"><i
+                                                                class="far fa-eye me-2"></i>View</a>
+                                                        <a class="dropdown-item" href="javascript:void(0);"><i
+                                                                class="far fa-trash-alt me-2"></i>Delete</a>
+    
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label class="custom_check">
+                                                    <input type="checkbox" name="invoice">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                                <a href="/admin/invoicedetails" class="invoice-link">IN093439#@10</a>
+                                            </td>
+                                            <td>Food</td>
+                                            <td>14 Mar 2022</td>
+                                            <td>
+                                                <h2 class="table-avatar">
+                                                    Karlene Chaidez
+                                                </h2>
+                                            </td>
+                                            <td class="text-primary">$1,222</td>
+                                            <td>18 Mar 2022</td>
+                                            <td><span class="badge bg-danger-light">Overdue</span></td>
+                                            <td class="text-end">
+                                                <div class="dropdown dropdown-action">
+                                                    <a href="#" class="action-icon dropdown-toggle"
+                                                        data-bs-toggle="dropdown" aria-expanded="false"><i
+                                                            class="fas fa-ellipsis-v"></i></a>
+                                                    <div class="dropdown-menu dropdown-menu-end">
+                                                        <a class="dropdown-item" href="/admin/editinvoice"><i
+                                                                class="far fa-edit me-2"></i>Edit</a>
+                                                        <a class="dropdown-item" href="/admin/invoicedetails"><i
+                                                                class="far fa-eye me-2"></i>View</a>
+                                                        <a class="dropdown-item" href="javascript:void(0);"><i
+                                                                class="far fa-trash-alt me-2"></i>Delete</a>
+    
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label class="custom_check">
+                                                    <input type="checkbox" name="invoice">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                                <a href="/admin/invoicedetails" class="invoice-link">IN093439#@11</a>
+                                            </td>
+                                            <td>Marketing</td>
+                                            <td>7 Mar 2022</td>
+                                            <td>
+                                                <h2 class="table-avatar">
+                                                    Russell Copeland
+                                                </h2>
+                                            </td>
+                                            <td class="text-primary">$3,470</td>
+                                            <td>10 Mar 2022</td>
+                                            <td><span class="badge bg-primary-light">Cancelled</span></td>
+                                            <td class="text-end">
+                                                <div class="dropdown dropdown-action">
+                                                    <a href="#" class="action-icon dropdown-toggle"
+                                                        data-bs-toggle="dropdown" aria-expanded="false"><i
+                                                            class="fas fa-ellipsis-v"></i></a>
+                                                    <div class="dropdown-menu dropdown-menu-end">
+                                                        <a class="dropdown-item" href="/admin/editinvoice"><i
+                                                                class="far fa-edit me-2"></i>Edit</a>
+                                                        <a class="dropdown-item" href="/admin/invoicedetails"><i
+                                                                class="far fa-eye me-2"></i>View</a>
+                                                        <a class="dropdown-item" href="javascript:void(0);"><i
+                                                                class="far fa-trash-alt me-2"></i>Delete</a>
+    
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+    
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end parially paid -->
+        <!-- closed -->
+        <div id="viewclosed" style="display: none;">
+            <h3>closed</h3>
+            <div class="row" >
+                <div class="col-sm-12">
+                    <div class="card card-table">
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-stripped table-hover datatable">
+                                    <thead class="thead-light">
+                                        <tr>
+                                            <th>Invoice ID</th>
+                                            <th>Category</th>
+                                            <th>Created on</th>
+                                            <th>Invoice to</th>
+                                            <th>Amount</th>
+                                            <th>Due date</th>
+                                            <th>Status</th>
+                                            <th class="text-end">Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <label class="custom_check">
+                                                    <input type="checkbox" name="invoice">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                                <a href="/admin/invoicedetails" class="invoice-link">IN093439#@09</a>
+                                            </td>
+                                            <td>Advertising</td>
+                                            <td>16 Mar 2022</td>
+                                            <td>
+                                                <h2 class="table-avatar">
+                                                    Barbara Moore
+                                                </h2>
+                                            </td>
+                                            <td class="text-primary">$1,54,220</td>
+                                            <td>23 Mar 2022</td>
+                                            <td><span class="badge bg-success-light">Paid</span></td>
+                                            <td class="text-end">
+                                                <div class="dropdown dropdown-action">
+                                                    <a href="#" class="action-icon dropdown-toggle"
+                                                        data-bs-toggle="dropdown" aria-expanded="false"><i
+                                                            class="fas fa-ellipsis-v"></i></a>
+                                                    <div class="dropdown-menu dropdown-menu-end">
+                                                        <a class="dropdown-item" href="/admin/editinvoice"><i
+                                                                class="far fa-edit me-2"></i>Edit</a>
+                                                        <a class="dropdown-item" href="/admin/invoicedetails"><i
+                                                                class="far fa-eye me-2"></i>View</a>
+                                                        <a class="dropdown-item" href="javascript:void(0);"><i
+                                                                class="far fa-trash-alt me-2"></i>Delete</a>
+    
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label class="custom_check">
+                                                    <input type="checkbox" name="invoice">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                                <a href="/admin/invoicedetails" class="invoice-link">IN093439#@10</a>
+                                            </td>
+                                            <td>Food</td>
+                                            <td>14 Mar 2022</td>
+                                            <td>
+                                                <h2 class="table-avatar">
+                                                    Karlene Chaidez
+                                                </h2>
+                                            </td>
+                                            <td class="text-primary">$1,222</td>
+                                            <td>18 Mar 2022</td>
+                                            <td><span class="badge bg-danger-light">Overdue</span></td>
+                                            <td class="text-end">
+                                                <div class="dropdown dropdown-action">
+                                                    <a href="#" class="action-icon dropdown-toggle"
+                                                        data-bs-toggle="dropdown" aria-expanded="false"><i
+                                                            class="fas fa-ellipsis-v"></i></a>
+                                                    <div class="dropdown-menu dropdown-menu-end">
+                                                        <a class="dropdown-item" href="/admin/editinvoice"><i
+                                                                class="far fa-edit me-2"></i>Edit</a>
+                                                        <a class="dropdown-item" href="/admin/invoicedetails"><i
+                                                                class="far fa-eye me-2"></i>View</a>
+                                                        <a class="dropdown-item" href="javascript:void(0);"><i
+                                                                class="far fa-trash-alt me-2"></i>Delete</a>
+    
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label class="custom_check">
+                                                    <input type="checkbox" name="invoice">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                                <a href="/admin/invoicedetails" class="invoice-link">IN093439#@11</a>
+                                            </td>
+                                            <td>Marketing</td>
+                                            <td>7 Mar 2022</td>
+                                            <td>
+                                                <h2 class="table-avatar">
+                                                    Russell Copeland
+                                                </h2>
+                                            </td>
+                                            <td class="text-primary">$3,470</td>
+                                            <td>10 Mar 2022</td>
+                                            <td><span class="badge bg-primary-light">Cancelled</span></td>
+                                            <td class="text-end">
+                                                <div class="dropdown dropdown-action">
+                                                    <a href="#" class="action-icon dropdown-toggle"
+                                                        data-bs-toggle="dropdown" aria-expanded="false"><i
+                                                            class="fas fa-ellipsis-v"></i></a>
+                                                    <div class="dropdown-menu dropdown-menu-end">
+                                                        <a class="dropdown-item" href="/admin/editinvoice"><i
+                                                                class="far fa-edit me-2"></i>Edit</a>
+                                                        <a class="dropdown-item" href="/admin/invoicedetails"><i
+                                                                class="far fa-eye me-2"></i>View</a>
+                                                        <a class="dropdown-item" href="javascript:void(0);"><i
+                                                                class="far fa-trash-alt me-2"></i>Delete</a>
+    
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+    
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end closed -->
+
+
     </div>
 </div>
 
 
 
-<<<<<<< HEAD
 <script>
 
      $(document).ready(function () {
@@ -632,9 +1077,6 @@
 //    });
 // });
 </script>
-=======
-
->>>>>>> 123d164bd7de7edc92ede56dd654abba3fac6a0d
 
 
 {% endblock %}
