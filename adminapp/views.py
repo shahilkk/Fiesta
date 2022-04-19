@@ -85,9 +85,19 @@ def profit(req):
 def addprofit(req):
     return render(req,'addprofit.html')
 
+
+
+def addestimate(req):
+    return render(req,'addestimate.html')    
+
+    
 def editcustomer(req):
     return render(req,'editcustomer.html')
 
 def calender(req):
     return render(req,'calender.html')
+
+
+def banksettings(req):
+    return render(req,'banksettings.html')
       

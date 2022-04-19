@@ -47,6 +47,9 @@
     <!-- edit customer -->
     <!-- edit customer -->
 
+    <!-- bank settings -->
+    <!-- bank settings -->
+
 
 
 
@@ -126,7 +129,7 @@
                                 <li><a href="/admin/addinvoice">Add Invoices</a></li>
                                 <li><a href="/admin/editinvoice">Edit Invoices</a></li>
                                 <li><a href="/admin/invoicedetails">Invoices Details</a></li>
-                                <!-- <li><a href="/admin/invoicesettings">Invoices Settings</a></li> -->
+                                <li><a href="/admin/invoicesettings">Invoices Settings</a></li>
                             </ul>
                         </li>
                         <li>
@@ -353,7 +356,17 @@
 
 
 
-
+if($('.datetimepicker').length > 0 ){
+		$('.datetimepicker').datetimepicker({
+			format: 'DD-MM-YYYY',
+			icons: {
+				up: "fas fa-angle-up",
+				down: "fas fa-angle-down",
+				next: 'fas fa-angle-right',
+				previous: 'fas fa-angle-left'
+			}
+		});
+	}
 
 
         // $(document).ready(function () {
@@ -496,6 +509,10 @@
                 $(this).addClass("active");
             });
         });
+
+
+    // bank settings
+    // end bank settings
     </script>
 </body>
 
