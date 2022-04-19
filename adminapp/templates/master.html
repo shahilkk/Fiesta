@@ -96,19 +96,19 @@
                 <div id="sidebar-menu" class="sidebar-menu">
                     <ul id="toggle">
                         <li class="menu-title"><span>Main</span></li>
-                        <li class="active">
+                        <li class="sub">
                             <a href="/admin/index"><i class="fa fa-home"
                                     data-bs-toggle="tooltip"></i><span>Dashboard</span></a>
                         </li>
-                        <li>
+                        <li class="">
                             <a href="/admin/customer"><i class="fa fa-users" data-bs-toggle="tooltip"></i>
                                 <span>Customers</span></a>
                         </li>
-                        <li>
+                        <li class="">
                             <a href="/admin/marketingstaff"><i class="fa fa-user" data-bs-toggle="tooltip"
                                     title="fa fa-user"></i> <span>Marketing Staff</span></a>
                         </li>
-                        <li>
+                        <li class="font-regular">
                             <a href="/admin/estimate"><i class="fa fa-file" data-bs-toggle="tooltip"
                                     title="fa fa-file-text"></i><span>Estimates</span></a>
                         </li>
@@ -336,12 +336,19 @@
 
 
     <script>
+
+
+
+
+
+
         // $(document).ready(function () {
         //     console.log('hi')
         //     $('#toggle li').on('click', function () {
         //         $(this).removeClass('font-regular').addClass('active');
         //     });
         // });
+
 
         // $(function () {
         //     $('#toggle li').click(function () {
@@ -350,11 +357,29 @@
         //     });
         // });
 
-        // $(document).ready(function () {
-        //     $('#toggle li').on('click', function () {
-        //         // alert('clicked');
-        //         $(this).siblings().removeClass('active');
-        //         $(this).addClass('active');
+        $(document).ready(function () {
+            $('#toggle li').on('click', function () {
+                // alert('clicked');
+                $(this).siblings().removeClass('active');
+                $(this).addClass('active');
+            });
+        });
+
+        // $(function () {
+        //     $("li").click(function () {
+        //         // remove classes from all
+        //         $("li").removeClass("active");
+        //         // add class to the one we clicked
+        //         $(this).addClass("active");
+        //     });
+        // });
+
+        // $('li').click(function (e) {
+        //     e.preventDefault();
+        //     $(this).addClass('active');
+        //     $(this).siblings().each(function () {
+        //         $(this).removeClass('active');
+
         //     });
         // });
 
@@ -436,15 +461,15 @@
 
 
         // selectbox
-        $('.app-listing .selectBox').on("click", function() {
-        $(this).parent().find('#checkBoxes').fadeToggle();
-        $(this).parent().parent().siblings().find('#checkBoxes').fadeOut();
-    });
+        $('.app-listing .selectBox').on("click", function () {
+            $(this).parent().find('#checkBoxes').fadeToggle();
+            $(this).parent().parent().siblings().find('#checkBoxes').fadeOut();
+        });
 
-    $('.invoices-main-form .selectBox').on("click", function() {
-        $(this).parent().find('#checkBoxes-one').fadeToggle();
-        $(this).parent().parent().siblings().find('#checkBoxes-one').fadeOut();
-    });
+        $('.invoices-main-form .selectBox').on("click", function () {
+            $(this).parent().find('#checkBoxes-one').fadeToggle();
+            $(this).parent().parent().siblings().find('#checkBoxes-one').fadeOut();
+        });
         // end selectbox
     </script>
 </body>
