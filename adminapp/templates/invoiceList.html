@@ -233,9 +233,9 @@
                     <div class="row align-items-center">
                         <div class="col-lg-8 col-md-8">
                             <div class="invoices-tabs">
-                                <ul>
-                                    <li><a href="#" id="allinvoice" class="active">All Invoice</a></li>
-                                    <li><a href="#" id="billed">Billed</a></li>
+                                <ul id="toggle">
+                                    <li class="font-regular"><a href="#" id="allinvoice" >All Invoice</a></li>
+                                    <li class="font-regular"><a href="#" id="billed">Billed</a></li>
                                     <li><a href="#" id="advanced">Advanced</a></li>
                                     <li><a href="#" id="parially">Parially Paid</a></li>
                                     <li><a href="#" id="closed">Closed</a></li>
@@ -1016,8 +1016,16 @@
 
 
 <script>
+
+     $(document).ready(function () {
+            console.log('hi')
+            $('#toggle li').on('click', function () {
+                $(this).removeClass('font-regular').addClass('active');
+            });
+        });
+
+        
     $('#allinvoice').click(function () {
-        console.log('hi')
         $('#viewallinvoice').show()
         $('#viewbilled').hide()
         $('#viewadvanced').hide()
@@ -1060,7 +1068,14 @@
     })
  
   
-
+//     $(function() {
+//    $("li").click(function() {
+//       // remove classes from all
+//       $("li").removeClass("active");
+//       // add class to the one we clicked
+//       $(this).addClass("active");
+//    });
+// });
 </script>
 
 
