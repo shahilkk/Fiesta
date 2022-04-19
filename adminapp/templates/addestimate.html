@@ -14,8 +14,8 @@
                 <div class="col-sm-12">
                     <h3 class="page-title">Estimate</h3>
                     <ul class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
-                        <li class="breadcrumb-item"><a href="estimates.html">Estimate</a></li>
+                        <li ><a href="/admin/index">Dashboard /</a></li>
+                        <li ><a href="/admin/estimate"> Estimate /</a></li>
                         <li class="breadcrumb-item active">Add Estimate</li>
                     </ul>
                 </div>
@@ -161,7 +161,19 @@
 </div>
 
 
-
+<script>
+    if ($('.datetimepicker').length > 0) {
+            $('.datetimepicker').datetimepicker({
+                format: 'DD-MM-YYYY',
+                icons: {
+                    up: "fas fa-angle-up",
+                    down: "fas fa-angle-down",
+                    next: 'fas fa-angle-right',
+                    previous: 'fas fa-angle-left'
+                }
+            });
+        }
+</script>
 
 
 {% endblock %}
