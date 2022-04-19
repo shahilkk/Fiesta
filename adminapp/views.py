@@ -93,4 +93,15 @@ def viewestimate(req):
 
 def editcustomer(req):
     return render(req,'editcustomer.html')
+
+
+def addestimate(req):
+    return render(req,'addestimate.html')
+
+def calender(req):
+    return render(req,'calender.html')
+
+
+def banksettings(req):
+    return render(req,'banksettings.html')
       

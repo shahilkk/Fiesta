@@ -25,4 +25,8 @@ urlpatterns = [
     path('addprofit',views.addprofit,name="addprofit"),
     path('viewestimate',views.viewestimate,name="viewestimate"),
     path('editcustomer',views.editcustomer,name="editcustomer"),
+    path('calender',views.calender,name="calender"),
+    path('addestimate',views.addestimate,name="addestimate"),
+    path('editcustomer',views.editcustomer,name="editcustomer"),
+    path('banksettings',views.banksettings,name="banksettings"),
 ]
