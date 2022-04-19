@@ -298,6 +298,7 @@
 
     <!-- index -->
     <script src="{% static 'js/jquery-3.6.0.min.js' %}"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
     <script src="{% static 'js/feather.min.js' %}"></script>
     <script src="{% static 'plugins/slimscroll/jquery.slimscroll.min.js' %}"></script>
@@ -343,30 +344,29 @@
     <!-- edit customer -->
 
 
+
+
+
+
     <script>
+
         $(document).ready(function () {
             $('#toggle li').on('click', function () {
                 $(this).removeClass('open').addClass('open');
             });
         });
-    </script>
 
-
-    <script>
-
-
-
-if($('.datetimepicker').length > 0 ){
-		$('.datetimepicker').datetimepicker({
-			format: 'DD-MM-YYYY',
-			icons: {
-				up: "fas fa-angle-up",
-				down: "fas fa-angle-down",
-				next: 'fas fa-angle-right',
-				previous: 'fas fa-angle-left'
-			}
-		});
-	}
+        // if ($('.datetimepicker').length > 0) {
+        //     $('.datetimepicker').datetimepicker({
+        //         format: 'DD-MM-YYYY',
+        //         icons: {
+        //             up: "fas fa-angle-up",
+        //             down: "fas fa-angle-down",
+        //             next: 'fas fa-angle-right',
+        //             previous: 'fas fa-angle-left'
+        //         }
+        //     });
+        // }
 
 
         // $(document).ready(function () {
