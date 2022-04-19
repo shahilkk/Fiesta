@@ -89,4 +89,8 @@ def addprofit(req):
 
 def addestimate(req):
     return render(req,'addestimate.html')    
+
+    
+def editcustomer(req):
+    return render(req,'editcustomer.html')
       
