@@ -343,12 +343,116 @@ $(this).removeClass('open').addClass('open');
 
 
     <script>
-        $(document).ready(function () {
-            console.log('hi')
-            $('#toggle li').on('click', function () {
-                $(this).removeClass('open').addClass('open');
-            });
+        // $(document).ready(function () {
+        //     console.log('hi')
+        //     $('#toggle li').on('click', function () {
+        //         $(this).removeClass('font-regular').addClass('active');
+        //     });
+        // });
+
+        // $(function () {
+        //     $('#toggle li').click(function () {
+        //         $('#toggle li.active').removeClass('active');
+        //         $(this).addClass('active');
+        //     });
+        // });
+
+        // $(document).ready(function () {
+        //     $('#toggle li').on('click', function () {
+        //         // alert('clicked');
+        //         $(this).siblings().removeClass('active');
+        //         $(this).addClass('active');
+        //     });
+        // });
+
+
+        //    toggle
+        $(document).on('click', '#toggle_btn', function () {
+            if ($('body').hasClass('mini-sidebar')) {
+                $('body').removeClass('mini-sidebar');
+                $('.subdrop + ul').slideDown();
+            } else {
+                $('body').addClass('mini-sidebar');
+                $('.subdrop + ul').slideUp();
+            }
+            setTimeout(function () {
+                mA.redraw();
+                mL.redraw();
+            }, 300);
+            return false;
         });
+        // end toggle
+
+        // filters
+        $(document).on('click', '#filter_search', function () {
+            $('#filter_inputs').slideToggle("slow");
+        });
+
+        // endfilter
+
+
+
+        // datatable
+        if ($('.datatable').length > 0) {
+            $('.datatable').DataTable({
+                language: {
+                    search: '<i class="fas fa-search"></i>',
+                    searchPlaceholder: "Search"
+                }
+            });
+        }
+        // end datatable
+
+
+
+
+        //    add + in add invoice
+        $(document).on("click", ".add-btn", function () {
+            var experiencecontent = '<tr class="add-row">' +
+                '<td>' +
+                '<input type="text" class="form-control">' +
+                '</td>' +
+                '<td>' +
+                '<input type="text" class="form-control">' +
+                '</td>' +
+                '<td>' +
+                '<input type="text" class="form-control">' +
+                '</td>' +
+                '<td>' +
+                '<input type="text" class="form-control">' +
+                '</td>' +
+                '<td>' +
+                '<input type="text" class="form-control">' +
+                '</td>' +
+                '<td>' +
+                '<input type="text" class="form-control">' +
+                '</td>' +
+                '<td class="add-remove text-end">' +
+                '<a href="javascript:void(0);" class="add-btn me-2"><i class="fas fa-plus-circle"></i></a> ' +
+                '<a href="#" class="copy-btn me-2"><i class="fas fa-copy"></i></a>' +
+                '<a href="javascript:void(0);" class="remove-btn"><i class="fas fa-trash"></i></a>' +
+                '</td>' +
+                '</tr>';
+
+            $(".add-table-items").append(experiencecontent);
+            return false;
+        });
+        // end  + in add invoice
+
+
+
+
+        // selectbox
+        $('.app-listing .selectBox').on("click", function() {
+        $(this).parent().find('#checkBoxes').fadeToggle();
+        $(this).parent().parent().siblings().find('#checkBoxes').fadeOut();
+    });
+
+    $('.invoices-main-form .selectBox').on("click", function() {
+        $(this).parent().find('#checkBoxes-one').fadeToggle();
+        $(this).parent().parent().siblings().find('#checkBoxes-one').fadeOut();
+    });
+        // end selectbox
     </script>
 </body>
 
