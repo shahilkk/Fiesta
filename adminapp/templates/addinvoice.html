@@ -1,6 +1,7 @@
 {% extends 'master.html' %}
 {% block content %}
 {% load static %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 
 
@@ -129,13 +130,18 @@
                                         <div class="inovices-month-info">
                                             <div class="form-group mb-0">
                                                 <label class="custom_check w-100">
-                                                    <input type="checkbox" id="enableTax" name="invoice">
-                                                    <span class="checkmark"></span> Enable tax
+                                                    <input type="checkbox" id="gst" name="invoice">
+                                                    <span class="checkmark"></span> Enable Gst
                                                 </label>
-                                                <label class="custom_check w-100">
+                                                <div class="form-group" style="display: none;" id="showgst">
+                                                    <label>Gst Number</label>
+                                                    <input class="form-control" type="text"
+                                                        placeholder="Enter Gst Number">
+                                                </div>
+                                                <!-- <label class="custom_check w-100">
                                                     <input type="checkbox" id="chkYes" name="invoice">
                                                     <span class="checkmark"></span> Recurring Invoice
-                                                </label>
+                                                </label> -->
                                             </div>
                                             <div id="show-invoices">
                                                 <div class="row">
@@ -638,5 +644,12 @@
         </div>
     </div>
 </div>
+<script>
+    $('#gst').click(function(){
+        console.log('hi')
+    $('#showgst').show()
+
+})
+</script>
 <!-- end modal -->
 {% endblock %}
