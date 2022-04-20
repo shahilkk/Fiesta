@@ -21,13 +21,23 @@ def addcustomer(req):
 
 def editcustomer(req):
     context={"is_customer":True}
-    return render(req,'editcustomer.html',context)       
+    return render(req,'editcustomer.html',context)   
+
+
+
+def viewcustomer(req):
+    context={"is_customer":True}
+    return render(req,'viewcustomer.html',context)         
 
 
 def marketingstaff(req):
     context={"is_marketingstaff":True}
     return render(req,'marketingstaff.html',context)      
 
+
+def addmstaff(req):
+    context={"is_marketingstaff":True}
+    return render(req,'addmstaff.html',context)
 
 
 
@@ -79,9 +89,10 @@ def editinvoice(req):
     return render(req,'editinvoice.html',context) 
 
 
-def invoicesettings(req):
-    context={"is_invoice":True}
-    return render(req,'invoicesettings.html',context) 
+def bank(req):
+    context={"is_bank":True}
+    return render(req,'addbank.html',context) 
+    
 
 def products(req):
     context={"is_product":True}
@@ -124,17 +135,19 @@ def addprofit(req):
     context={"is_profit":True}
     return render(req,'addprofit.html',context)
 
-def addmstaff(req):
-    context={"is_profit":True}
-    return render(req,'addmstaff.html',context)
+
+
+
+def filter(req):
+    context={"is_filter":True}
+    return render(req,'filter.html',context) 
+      
+
 
 
 
    
-
-
-
-
-
+def demo(request):
+    return render(request,'demo/index.html')
 
       
