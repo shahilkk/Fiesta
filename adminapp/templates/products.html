@@ -26,7 +26,7 @@
                         <div class="col-lg-12 col-md-12">
                             <div class="invoices-items-tabs">
                                 <ul>
-                                    <li><a href="/admin/products" class="active"> All Items</a></li>
+                                    <li><a href="/admin/products" class="active"> All Products</a></li>
                                     
                                 </ul>
                             </div>
@@ -42,7 +42,7 @@
                         <div class="col-lg-12 col-md-12">
                             <div class="invoices-settings-btn invoices-settings-btn-one">
                                 <a href="/admin/productcatogory" class="btn" data-bs-toggle="modal" data-bs-target="#add_items">
-                                    <i data-feather="plus-circle"></i> Add New Item
+                                    <i data-feather="plus-circle"></i> Add New Product
                                 </a>
                             </div>
                         </div>
@@ -59,8 +59,8 @@
                                 <thead class="thead-light">
                                     <tr>
                                         <th>Name</th>
-                                        <th>Pricing</th>
-                                        <th>Discount (%)</th>
+                                        <th>Per head</th>
+                                        <th>per Kg</th>
                                         <th>Description</th>
                                         <th>Date Added</th>
                                         <th class="text-end">Action</th>
@@ -183,7 +183,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <div class="form-header text-start mb-0">
-                    <h4 class="mb-0">Create New Item</h4>
+                    <h4 class="mb-0">Create New Product</h4>
                 </div>
                 <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
@@ -194,7 +194,7 @@
                     <div class="row">
                         <div class="col-lg-6 col-md-6">
                             <div class="form-group">
-                                <label>Item Name</label>
+                                <label>Food Name</label>
                                 <input type="text" class="form-control" placeholder="Add New Item">
                             </div>
                         </div>
@@ -202,31 +202,48 @@
                             <div class="form-group">
                                 <label>Category</label>
                                 <select class="form-select form-control">
-                                    <option>Select category</option>
-                                    <option>GoMechanic Neutron 600</option>
-                                    <option>Car Wash Shampoo 250ml</option>
-                                    <option>Bosch 1300W High Pressure...</option>
-                                    <option>Clear Coat Spray -Quick Dr...9</option>
-                                    <option>Aquatak High Pressure Wash.</option>
+                                    <option>Select Category</option>
+                                    <option>Welcome Drink</option>
+                                    <option>Soups</option>
+                                    <option>Apetizer</option>
+                                    <option>Breads</option>
+                                    <option>Salads</option>
+                                    <option value="">Snacks</option>
+                                    <option value="">Contintal Snacks</option>
+                                    <option value="">Main Course</option>
+                                    <option value="">Biriyani</option>
+                                    <option value="">Noodles</option>
+                                    <option value="">Beef Dishes</option>
+                                    <option value="">Chiken Dishes</option>
+                                    <option value="">Mutton Dishes</option>
+                                    <option value="">Fish Dishes</option>
+                                    <option value="">Prawns Dishes</option>
+                                    <option value="">Thandoories</option>
+                                    <option value="">Desserts</option>
+                                    <option value="">Pastries</option>
+                                    <option value="">Sweets</option>
+                                    
+
                                 </select>
                             </div>
                         </div>
                         <div class="col-lg-6 col-md-6">
                             <div class="form-group">
-                                <label>Price Per unit</label>
+                                <label>Price Per Head</label>
                                 <input type="text" class="form-control" placeholder="$">
                             </div>
                         </div>
+                        
                         <div class="col-lg-6 col-md-6">
                             <div class="form-group">
-                                <label>Discount</label>
-                                <input type="text" class="form-control" placeholder="%">
+                                <label>Price per Kg</label>
+                                <input type="text" class="form-control" placeholder="$/kg">
                             </div>
                         </div>
                         <div class="col-lg-12 col-md-12">
                             <div class="form-group">
-                                <label>Description (Optional) </label>
-                                <textarea class="form-control" placeholder="Add item description"></textarea>
+                                <label>Food Deatails </label>
+                                <textarea class="form-control" placeholder="Food Deatails"></textarea>
                             </div>
                         </div>
                     </div>
