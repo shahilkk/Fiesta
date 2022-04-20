@@ -513,6 +513,11 @@
 
 
 
+        $(".add-table-items").on('click','.remove-btn', function () {
+		$(this).closest('.add-row').remove();
+		return false;
+    });
+
         // $(document).ready(function () {
         //     $(".tab").click(function () {
         //         $(".tab").removeClass("active");
