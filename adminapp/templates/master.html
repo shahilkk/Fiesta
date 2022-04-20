@@ -30,7 +30,7 @@
 
 
     <!-- invoicelist -->
-    <link rel="stylesheet" href="{% static 'css/bootstrap-datetimepicker.min.css' %}">
+    <link rel="stylesheet" href="assets/css/bootstrap-datetimepicker.min.css">
     <!-- invoice list -->
 
     <!-- invoice grid -->
@@ -119,7 +119,11 @@
                             <a href="/admin/estimate"><i class="fa fa-file" data-bs-toggle="tooltip"
                                     title="fa fa-file-text"></i><span>Estimates</span></a>
                         </li>
-                        <li  {% if is_invoice %} class="active" {% endif %}>
+                        <li {% if is_invoice %} class="active" {% endif %}>
+                            <a href="/admin/invoiceList"><i class="fa fa-clipboard" data-bs-toggle="tooltip"
+                                    title="fa fa-clipboard"></i><span>Invoices </span></a>
+                        </li>
+                        <!-- <li  {% if is_invoice %} class="active" {% endif %}>
                             <a href="#"><i class="fa fa-clipboard" data-bs-toggle="tooltip"
                                     title="fa fa-clipboard"></i><span>Invoices</span> <span
                                     class="menu-arrow"></span></a>
@@ -131,7 +135,7 @@
                                 <li><a href="/admin/invoicedetails">Invoices Details</a></li>
                                 <li><a href="/admin/invoicesettings">Invoices Settings</a></li>
                             </ul>
-                        </li>
+                        </li> -->
                         <li {% if is_product %} class="active" {% endif %}>
                             <a href="/admin/products"><i class="fa fa-coffee" data-bs-toggle="tooltip"
                                     title="fa fa-coffee"></i> <span>Products</span></a>
@@ -144,10 +148,151 @@
                             <a href="/admin/expenses"><i class="fas fa-chart-area"></i> <span>Expenses</span></a>
                         </li>
                         <li {% if is_profit %} class="active" {% endif %}>
-                            
+
                             <a href="/admin/profit"><i class="fa fa-signal"></i> <span>Profit</span></a>
                         </li>
-                       
+                        <li {% if is_bank %} class="active" {% endif %}>
+                            <a href="/admin/bank"><i class="fa fa-university"></i> <span> Add Bank</span></a>
+                        </li>
+                        <li {% if is_filter %} class="active" {% endif %}>
+                            <a href="/admin/filter"><i class="fa fa-filter"></i> <span> Advace filter </span></a>
+                        </li>
+                        <!-- <li class="submenu">
+                            <a href="#"><i data-feather="pie-chart"></i> <span> Reports</span> <span
+                                    class="menu-arrow"></span></a>
+                            <ul>
+                                <li><a href="sales-report.html">Sales Report</a></li>
+                                <li><a href="expenses-report.html">Expenses Report</a></li>
+                                <li><a href="profit-loss-report.html">Profit & Loss Report</a></li>
+                                <li><a href="taxs-report.html">Taxs Report</a></li>
+                            </ul>
+                        </li> -->
+                        <!-- <li>
+                            <a href="settings.html"><i data-feather="settings"></i> <span>Settings</span></a>
+                        </li>
+                        <li class="submenu">
+                            <a href="#"><i data-feather="grid"></i> <span> Application</span> <span
+                                    class="menu-arrow"></span></a>
+                            <ul>
+                                <li><a href="chat.html">Chat</a></li>
+                                <li><a href="calendar.html">Calendar</a></li>
+                                <li><a href="inbox.html">Email</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-title">
+                            <span>Pages</span>
+                        </li>
+                        <li>
+                            <a href="profile.html"><i data-feather="user-plus"></i> <span>Profile</span></a>
+                        </li>
+                        <li class="submenu">
+                            <a href="#"><i data-feather="lock"></i> <span> Authentication </span> <span
+                                    class="menu-arrow"></span></a>
+                            <ul>
+                                <li><a href="login.html"> Login </a></li>
+                                <li><a href="register.html"> Register </a></li>
+                                <li><a href="forgot-password.html"> Forgot Password </a></li>
+                                <li><a href="lock-screen.html"> Lock Screen </a></li>
+                            </ul>
+                        </li>
+                        <li class="submenu">
+                            <a href="#"><i data-feather="alert-octagon"></i> <span> Error Pages </span> <span
+                                    class="menu-arrow"></span></a>
+                            <ul>
+                                <li><a href="error-404.html">404 Error </a></li>
+                                <li><a href="error-500.html">500 Error </a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="users.html"><i data-feather="user"></i> <span>Users</span></a>
+                        </li>
+                        <li>
+                            <a href="blank-page.html"><i data-feather="file"></i> <span>Blank Page</span></a>
+                        </li>
+                        <li>
+                            <a href="maps-vector.html"><i data-feather="map-pin"></i> <span>Vector Maps</span></a>
+                        </li>
+                        <li class="menu-title">
+                            <span>UI Interface</span>
+                        </li>
+                        <li>
+                            <a href="components.html"><i data-feather="layers"></i> <span>Components</span></a>
+                        </li>
+                        <li class="submenu">
+                            <a href="#"><i data-feather="box"></i> <span>Elements </span> <span
+                                    class="menu-arrow"></span></a>
+                            <ul>
+                                <li><a href="sweetalerts.html">Sweet Alerts</a></li>
+                                <li><a href="tooltip.html">Tooltip</a></li>
+                                <li><a href="popover.html">Popover</a></li>
+                                <li><a href="ribbon.html">Ribbon</a></li>
+                                <li><a href="clipboard.html">Clipboard</a></li>
+                                <li><a href="drag-drop.html">Drag & Drop</a></li>
+                                <li><a href="rangeslider.html">Range Slider</a></li>
+                                <li><a href="rating.html">Rating</a></li>
+                                <li><a href="toastr.html">Toastr</a></li>
+                                <li><a href="text-editor.html">Text Editor</a></li>
+                                <li><a href="counter.html">Counter</a></li>
+                                <li><a href="scrollbar.html">Scrollbar</a></li>
+                                <li><a href="spinner.html">Spinner</a></li>
+                                <li><a href="notification.html">Notification</a></li>
+                                <li><a href="lightbox.html">Lightbox</a></li>
+                                <li><a href="stickynote.html">Sticky Note</a></li>
+                                <li><a href="timeline.html">Timeline</a></li>
+                                <li><a href="horizontal-timeline.html">Horizontal Timeline</a></li>
+                                <li><a href="form-wizard.html">Form Wizard</a></li>
+                            </ul>
+                        </li>
+                        <li class="submenu">
+                            <a href="#"><i data-feather="bar-chart-2"></i> <span> Charts </span> <span
+                                    class="menu-arrow"></span></a>
+                            <ul>
+                                <li><a href="chart-apex.html">Apex Charts</a></li>
+                                <li><a href="chart-js.html">Chart Js</a></li>
+                                <li><a href="chart-morris.html">Morris Charts</a></li>
+                                <li><a href="chart-flot.html">Flot Charts</a></li>
+                                <li><a href="chart-peity.html">Peity Charts</a></li>
+                                <li><a href="chart-c3.html">C3 Charts</a></li>
+                            </ul>
+                        </li>
+                        <li class="submenu">
+                            <a href="#"><i data-feather="award"></i> <span> Icons </span> <span
+                                    class="menu-arrow"></span></a>
+                            <ul>
+                                <li><a href="icon-fontawesome.html">Fontawesome Icons</a></li>
+                                <li><a href="icon-feather.html">Feather Icons</a></li>
+                                <li><a href="icon-ionic.html">Ionic Icons</a></li>
+                                <li><a href="icon-material.html">Material Icons</a></li>
+                                <li><a href="icon-pe7.html">Pe7 Icons</a></li>
+                                <li><a href="icon-simpleline.html">Simpleline Icons</a></li>
+                                <li><a href="icon-themify.html">Themify Icons</a></li>
+                                <li><a href="icon-weather.html">Weather Icons</a></li>
+                                <li><a href="icon-typicon.html">Typicon Icons</a></li>
+                                <li><a href="icon-flag.html">Flag Icons</a></li>
+                            </ul>
+                        </li>
+                        <li class="submenu">
+                            <a href="#"><i data-feather="columns"></i> <span> Forms </span> <span
+                                    class="menu-arrow"></span></a>
+                            <ul>
+                                <li><a href="form-basic-inputs.html">Basic Inputs </a></li>
+                                <li><a href="form-input-groups.html">Input Groups </a></li>
+                                <li><a href="form-horizontal.html">Horizontal Form </a></li>
+                                <li><a href="form-vertical.html"> Vertical Form </a></li>
+                                <li><a href="form-mask.html">Form Mask </a></li>
+                                <li><a href="form-validation.html">Form Validation </a></li>
+                                <li><a href="form-select2.html">Form Select2 </a></li>
+                                <li><a href="form-fileupload.html">File Upload </a></li>
+                            </ul>
+                        </li>
+                        <li class="submenu">
+                            <a href="#"><i data-feather="layout"></i> <span> Tables </span> <span
+                                    class="menu-arrow"></span></a>
+                            <ul>
+                                <li><a href="tables-basic.html">Basic Tables </a></li>
+                                <li><a href="data-tables.html">Data Table </a></li>
+                            </ul>
+                        </li> -->
                     </ul>
                 </div>
             </div>
@@ -164,7 +309,7 @@
 
     <!-- index -->
     <script src="{% static 'js/jquery-3.6.0.min.js' %}"></script>
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
     <script src="{% static 'js/feather.min.js' %}"></script>
     <script src="{% static 'plugins/slimscroll/jquery.slimscroll.min.js' %}"></script>
@@ -190,7 +335,7 @@
     <!-- estimate -->
     <!-- end estimate -->
 
-    <!-- invoice list --> 
+    <!-- invoice list -->
     <script src="{% static 'plugins/moment/moment.min.js' %}"></script>
     <script src="{% static 'js/bootstrap-datetimepicker.min.js' %}"></script>
     <!-- end invoice list -->
@@ -216,7 +361,12 @@
 
     <script>
 
-    
+        // $(document).ready(function () {
+        //     $('#toggle li').on('click', function () {
+        //         $(this).removeClass('open').addClass('open');
+        //     });
+        // });
+
         if ($('.datetimepicker').length > 0) {
             $('.datetimepicker').datetimepicker({
                 format: 'DD-MM-YYYY',
@@ -230,6 +380,46 @@
         }
 
 
+        // $(document).ready(function () {
+        //     console.log('hi')
+        //     $('#toggle li').on('click', function () {
+        //         $(this).removeClass('font-regular').addClass('active');
+        //     });
+        // });
+
+
+        // $(function () {
+        //     $('#toggle li').click(function () {
+        //         $('#toggle li.active').removeClass('active');
+        //         $(this).addClass('active');
+        //     });
+        // });
+
+        // $(document).ready(function () {
+        //     $('#toggle li').on('click', function () {
+        //         // alert('clicked');
+        //         $(this).siblings().removeClass('active');
+        //         $(this).addClass('active');
+        //     });
+        // });
+
+        // $(function () {
+        //     $("li").click(function () {
+        //         // remove classes from all
+        //         $("li").removeClass("active");
+        //         // add class to the one we clicked
+        //         $(this).addClass("active");
+        //     });
+        // });
+
+        // $('li').click(function () {
+        //     // e.preventDefault();
+        //     $(this).addClass('active');
+        //     $(this).siblings().each(function () {
+        //         $(this).removeClass('active');
+
+        //     });
+        // });
 
 
         //    toggle
@@ -323,10 +513,17 @@
 
 
 
-  
-        
+        // $(document).ready(function () {
+        //     $(".tab").click(function () {
+        //         $(".tab").removeClass("active");
+        //         // $(".tab").addClass("active"); // instead of this do the below 
+        //         $(this).addClass("active");
+        //     });
+        // });
 
 
+    // bank settings
+    // end bank settings
     </script>
 </body>
 

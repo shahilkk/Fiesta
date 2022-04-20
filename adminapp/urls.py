@@ -14,7 +14,7 @@ urlpatterns = [
     path('editinvoice',views.editinvoice,name="editinvoice"),
     path('addinvoice',views.addinvoice,name="addinvoice"),
     path('invoicedetails',views.invoicedetails,name="invoicedetails"),
-    path('invoicesettings',views.invoicesettings,name="invoicesettings"),
+    path('bank',views.bank,name="bank"),
     path('products',views.products,name="products"),
     path('editestimate',views.editestimate,name="editestimate"),
     path('payment',views.payment,name="payment"),
@@ -26,5 +26,12 @@ urlpatterns = [
     path('viewestimate',views.viewestimate,name="viewestimate"),
     path('editcustomer',views.editcustomer,name="editcustomer"),
     path('addestimate',views.addestimate,name="addestimate"),
+    path('filter',views.filter,name="filter"),
+    path('viewcustomer',views.viewcustomer,name="viewcustomer"),
+    
+
+    path('demo',views.demo,name="demo"),
+
+
    
 ]
