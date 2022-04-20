@@ -17,8 +17,8 @@
                     <h3 class="page-title">Customers</h3>
                     <ul class="breadcrumb">
                         <li class=""><a href="/admin/index">Dashboard /</a></li>
-                        <li class=""><a href="/admin/customer">Customers /</a></li>
-                        <li class="breadcrumb-item active">Add Customers</li>
+                        <li class=""><a href="/admin/customer">Clients /</a></li>
+                        <li class="breadcrumb-item active">Add Clients</li>
                     </ul>
                 </div>
             </div>
@@ -28,45 +28,87 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-body">
-                        <h4 class="card-title">Basic Info</h4>
+                        <h4 class="card-title">Client Info</h4>
                         <form action="#">
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Name</label>
+                                        <label>Client Name / Company Name</label>
                                         <input type="text" class="form-control">
                                     </div>
                                     <div class="form-group">
-                                        <label>Email</label>
+                                        <label>Client ID</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Company Phone Number</label>
                                         <input type="email" class="form-control">
                                     </div>
                                     <div class="form-group">
-                                        <label>Primary Currency</label>
-                                        <select class="select form-control form-control-lg">
-                                            <option>Select Currency</option>
-                                            <option>EUR Euro</option>
-                                            <option>INR Indoan Rupee</option>
-                                            <option>USD- US Dollar</option>
-                                        </select>
+                                        <label>Company Watsup Number</label>
+                                        <input type="email" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Company Email</label>
+                                        <input type="email" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label> Company Address</label>
+                                        <textarea rows="5" cols="5" class="form-control"
+                                            placeholder="Enter Address"></textarea>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Primary Contact Name</label>
+                                        <label>GST number</label>
                                         <input type="text" class="form-control">
                                     </div>
                                     <div class="form-group">
-                                        <label>Phone</label>
-                                        <input type="text" class="form-control">
+                                        <label>Primary Contact Type</label>
+                                        <select class="select form-control form-control-lg">
+                                            <option>watsup</option>
+                                            <option>email</option>
+                                            <option>phone number</option>
+                                            
+                                        </select>
                                     </div>
                                     <div class="form-group">
-                                        <label>Website</label>
+                                        <label>State</label>
+                                        <select class="select form-control form-control-lg">
+                                            <option>kerala</option>
+                                            <option>tamilnadu</option>
+                                            <option>karnataka</option>
+                                            
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Distric</label>
+                                        <select class="select form-control form-control-lg">
+                                            <option>kasargode</option>
+                                            <option>kannur</option>
+                                            <option>vayanad</option>
+                                            <option value=""> kozhikkod</option>
+                                            <option value="">malappuram</option>
+                                            <option value="">trissure</option>
+                                            <option value="">palakkad</option>
+                                            <option value="">ernakulam</option>
+                                            
+                                        </select>
+                                    </div>
+                                   
+                                    <div class="form-group">
+                                        <label>Zip Code</label>
                                         <input type="text" class="form-control">
                                     </div>
+                                    
+                                    
+                                   
                                 </div>
+                             
                             </div>
+
                         </form>
-                        <h4 class="card-title mt-4">Billing Address</h4>
+                        <!-- <h4 class="card-title mt-4">Billing Address</h4>
                         <form action="#">
                             <div class="row">
                                 <div class="col-md-6">
@@ -114,9 +156,11 @@
                                     </div>
                                 </div>
                             </div>
-                        </form>
+                        </form> -->
+                        <button type="button" class="btn btn-primary mr-1 mb-1" id="basic-alert">save</button>
                        
                     </div>
+                  
                 </div>
             </div>
         </div>

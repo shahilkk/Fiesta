@@ -124,6 +124,10 @@ def addprofit(req):
     context={"is_profit":True}
     return render(req,'addprofit.html',context)
 
+def addmstaff(req):
+    context={"is_profit":True}
+    return render(req,'addmstaff.html',context)
+
 
 
    
