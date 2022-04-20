@@ -33,5 +33,6 @@ urlpatterns = [
     path('demo',views.demo,name="demo"),
 
 
+    path('addmstaff',views.addmstaff,name="addmstaff"),
    
 ]

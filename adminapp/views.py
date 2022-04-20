@@ -35,6 +35,10 @@ def marketingstaff(req):
     return render(req,'marketingstaff.html',context)      
 
 
+def addmstaff(req):
+    context={"is_marketingstaff":True}
+    return render(req,'addmstaff.html',context)
+
 
 
 def Estimate(req):
@@ -130,6 +134,8 @@ def profit(req):
 def addprofit(req):
     context={"is_profit":True}
     return render(req,'addprofit.html',context)
+
+
 
 
 def filter(req):
