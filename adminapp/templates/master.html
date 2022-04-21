@@ -309,7 +309,6 @@
 
     <!-- index -->
     <script src="{% static 'js/jquery-3.6.0.min.js' %}"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
     <script src="{% static 'js/feather.min.js' %}"></script>
     <script src="{% static 'plugins/slimscroll/jquery.slimscroll.min.js' %}"></script>
@@ -420,6 +419,7 @@
 
         //     });
         // });
+      
 
 
         //    toggle
@@ -516,7 +516,14 @@
         $(".add-table-items").on('click','.remove-btn', function () {
 		$(this).closest('.add-row').remove();
 		return false;
+
+
+
+
     });
+
+
+    
 
         // $(document).ready(function () {
         //     $(".tab").click(function () {
