@@ -28,11 +28,13 @@ urlpatterns = [
     path('addestimate',views.addestimate,name="addestimate"),
     path('filter',views.filter,name="filter"),
     path('viewcustomer',views.viewcustomer,name="viewcustomer"),
+    path('addmstaff',views.addmstaff,name="addmstaff"),
+    path('editstaff',views.editstaff,name="editstaff"),
     
 
     path('demo',views.demo,name="demo"),
 
 
-    path('addmstaff',views.addmstaff,name="addmstaff"),
+    
    
 ]

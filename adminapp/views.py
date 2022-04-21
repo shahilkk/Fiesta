@@ -41,6 +41,12 @@ def addmstaff(req):
 
 
 
+def editstaff(req):
+    context={"is_marketingstaff":True}
+    return render(req,'editstaff.html',context)    
+
+
+
 def Estimate(req):
     context={"is_estimate":True}
     return render(req,'Estimate.html',context)   
