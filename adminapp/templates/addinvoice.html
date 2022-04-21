@@ -21,7 +21,7 @@
                 </div>
                 <div class="col-auto">
                     <div class="invoices-create-btn">
-                        <a class="invoices-preview-link" href="/admin/invoicedetails" 
+                        <a class="invoices-preview-link" href="/admin/invoicedetails"
                             data-bs-target="#invoices_preview"><i class="fe fe-eye"></i> Preview</a>
                         <a href="#" data-bs-toggle="modal" data-bs-target="#delete_invoices_details"
                             class="btn delete-invoice-btn">
@@ -102,7 +102,7 @@
                                         <h4 class="invoice-details-title">Invoice details</h4>
                                         <div class="invoice-details-box">
                                             <div class="invoice-inner-head">
-                                                <span>Invoice No. <a href="view-invoice.html">IN093439#@09</a></span>
+                                                <span>Invoice No. <span class="text-primary">IN093439#@09</span></span>
                                             </div>
                                             <div class="invoice-inner-footer">
                                                 <div class="row align-items-center">
@@ -128,7 +128,7 @@
                                     </div>
                                     <div class="col-xl-3 col-md-12 col-sm-12 col-12">
                                         <div class="inovices-month-info">
-                                            <div class="form-group mb-0">
+                                            <!-- <div class="form-group mb-0">
                                                 <label class="custom_check w-100">
                                                     <input type="checkbox" id="gst" name="invoice">
                                                     <span class="checkmark"></span> Enable Gst
@@ -138,11 +138,8 @@
                                                     <input class="form-control" type="text"
                                                         placeholder="Enter Gst Number">
                                                 </div>
-                                                <!-- <label class="custom_check w-100">
-                                                    <input type="checkbox" id="chkYes" name="invoice">
-                                                    <span class="checkmark"></span> Recurring Invoice
-                                                </label> -->
-                                            </div>
+                                             
+                                            </div> -->
                                             <div id="show-invoices">
                                                 <div class="row">
                                                     <div class="col-md-6">
@@ -248,62 +245,8 @@
                             </div>
                             <div class="row">
                                 <div class="col-lg-7 col-md-6">
-                                    <div class="invoice-fields">
-                                        <h4 class="field-title">More Fields</h4>
-                                        <div class="field-box">
-                                            <p>Payment Details</p>
-                                            <a class="btn btn-primary" href="#" data-bs-toggle="modal"
-                                                data-bs-target="#bank_details"><i
-                                                    class="fas fa-plus-circle me-2"></i>Add Bank Details</a>
-                                        </div>
-                                    </div>
-                                    <div class="invoice-faq">
-                                        <div class="panel-group" id="accordion" role="tablist"
-                                            aria-multiselectable="true">
-                                            <div class="faq-tab">
-                                                <div class="panel panel-default">
-                                                    <div class="panel-heading" role="tab" id="headingTwo">
-                                                        <p class="panel-title">
-                                                            <a class="collapsed" data-bs-toggle="collapse"
-                                                                data-bs-parent="#accordion" href="#collapseTwo"
-                                                                aria-expanded="false" aria-controls="collapseTwo">
-                                                                <i class="fas fa-plus-circle me-1"></i> Add
-                                                                Terms & Conditions
-                                                            </a>
-                                                        </p>
-                                                    </div>
-                                                    <div id="collapseTwo" class="panel-collapse collapse"
-                                                        role="tabpanel" aria-labelledby="headingTwo"
-                                                        data-bs-parent="#accordion">
-                                                        <div class="panel-body">
-                                                            <textarea class="form-control"></textarea>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="faq-tab">
-                                                <div class="panel panel-default">
-                                                    <div class="panel-heading" role="tab" id="headingThree">
-                                                        <p class="panel-title">
-                                                            <a class="collapsed" data-bs-toggle="collapse"
-                                                                data-bs-parent="#accordion" href="#collapseThree"
-                                                                aria-expanded="false" aria-controls="collapseThree">
-                                                                <i class="fas fa-plus-circle me-1"></i> Add
-                                                                Notes
-                                                            </a>
-                                                        </p>
-                                                    </div>
-                                                    <div id="collapseThree" class="panel-collapse collapse"
-                                                        role="tabpanel" aria-labelledby="headingThree"
-                                                        data-bs-parent="#accordion">
-                                                        <div class="panel-body">
-                                                            <textarea class="form-control"></textarea>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    
+                                   
                                 </div>
                                 <div class="col-lg-5 col-md-6">
                                     <div class="invoice-total-card">
@@ -346,14 +289,14 @@
                                         </div>
                                     </div>
                                     <div class="upload-sign">
-                                        <div class="form-group service-upload">
+                                        <!-- <div class="form-group service-upload">
                                             <span>Upload Sign</span>
                                             <input type="file" multiple>
                                         </div>
                                         <div class="form-group">
                                             <input type="text" class="form-control"
                                                 placeholder="Name of the Signatuaory">
-                                        </div>
+                                        </div> -->
                                         <div class="form-group float-end mb-0">
                                             <button class="btn btn-primary" type="submit">Save Invoice</button>
                                         </div>
@@ -371,179 +314,7 @@
 
 
 
-<!-- modal -->
-<div class="modal custom-modal fade invoices-preview" id="invoices_preview" role="dialog">
-    <div class="modal-dialog modal-dialog-centered modal-xl">
-        <div class="modal-content">
-            <div class="modal-body">
-                <div class="row justify-content-center">
-                    <div class="col-lg-12">
-                        <div class="card invoice-info-card">
-                            <div class="card-body pb-0">
-                                <div class="invoice-item invoice-item-one">
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <div class="invoice-logo">
-                                                <img src="{% static 'img/logo/img2.jpeg' %}" alt="logo">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="invoice-info">
-                                                <div class="invoice-head">
-                                                    <h2 class="text-primary">Invoice</h2>
-                                                    <p>Invoice Number : In983248782</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
 
-                                <div class="invoice-item invoice-item-bg">
-                                    <div class="invoice-circle-img">
-                                        <img src="assets/img/invoice-circle1.png" alt=""
-                                            class="invoice-circle1">
-                                        <img src="assets/img/invoice-circle2.png" alt=""
-                                            class="invoice-circle2">
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-lg-4 col-md-12">
-                                            <div class="invoice-info">
-                                                <strong class="customer-text-one">Billed to</strong>
-                                                <h6 class="invoice-name">Customer Name</h6>
-                                                <p class="invoice-details invoice-details-two">
-                                                    9087484288 <br>
-                                                    Address line 1, <br>
-                                                    Address line 2 <br>
-                                                    Zip code ,City - Country
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 col-md-12">
-                                            <div class="invoice-info">
-                                                <strong class="customer-text-one">Invoice From</strong>
-                                                <h6 class="invoice-name">Company Name</h6>
-                                                <p class="invoice-details invoice-details-two">
-                                                    9087484288 <br>
-                                                    Address line 1, <br>
-                                                    Address line 2 <br>
-                                                    Zip code ,City - Country
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 col-md-12">
-                                            <div class="invoice-info invoice-info-one border-0">
-                                                <p>Issue Date : 27 Jul 2022</p>
-                                                <p>Due Date : 27 Aug 2022</p>
-                                                <p>Due Amount : $ 1,54,22 </p>
-                                                <p>Recurring Invoice : 15 Months</p>
-                                                <p class="mb-0">PO Number : 54515454</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-
-                                <div class="invoice-item invoice-table-wrap">
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="table-responsive">
-                                                <table class="invoice-table table table-center mb-0">
-                                                    <thead>
-                                                        <tr>
-                                                            <th>Description</th>
-                                                            <th>Category</th>
-                                                            <th>Rate/Item</th>
-                                                            <th>Quantity</th>
-                                                            <th>Discount (%)</th>
-                                                            <th class="text-end">Amount</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <td>Dell Laptop</td>
-                                                            <td>Laptop</td>
-                                                            <td>$1,110</td>
-                                                            <th>2</th>
-                                                            <th>2%</th>
-                                                            <td class="text-end">$400</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>HP Laptop</td>
-                                                            <td>Laptop</td>
-                                                            <td>$1,500</td>
-                                                            <th>3</th>
-                                                            <th>6%</th>
-                                                            <td class="text-end">$3,000</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Apple Ipad</td>
-                                                            <td>Ipad</td>
-                                                            <td>$11,500</td>
-                                                            <th>1</th>
-                                                            <th>10%</th>
-                                                            <td class="text-end">$11,000</td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="row align-items-center justify-content-center">
-                                    <div class="col-lg-6 col-md-6">
-                                        <div class="invoice-payment-box">
-                                            <h4>Payment Details</h4>
-                                            <div class="payment-details">
-                                                <p>Debit Card XXXXXXXXXXXX-2541 HDFC Bank</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6 col-md-6">
-                                        <div class="invoice-total-card">
-                                            <div class="invoice-total-box">
-                                                <div class="invoice-total-inner">
-                                                    <p>Taxable <span>$6,660.00</span></p>
-                                                    <p>Additional Charges <span>$6,660.00</span></p>
-                                                    <p>Discount <span>$3,300.00</span></p>
-                                                    <p class="mb-0">Sub total <span>$3,300.00</span></p>
-                                                </div>
-                                                <div class="invoice-total-footer">
-                                                    <h4>Total Amount <span>$143,300.00</span></h4>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="invoice-sign-box">
-                                    <div class="row">
-                                        <div class="col-lg-8 col-md-8">
-                                            <div class="invoice-terms">
-                                                <h6>Notes:</h6>
-                                                <p class="mb-0">Enter customer notes or any other details</p>
-                                            </div>
-                                            <div class="invoice-terms mb-0">
-                                                <h6>Terms and Conditions:</h6>
-                                                <p class="mb-0">Enter customer notes or any other details</p>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 col-md-4">
-                                            <div class="invoice-sign text-end">
-                                                <img class="img-fluid d-inline-block"
-                                                    src="{% static '/img/signature.png' %}" alt="sign">
-                                                <span class="d-block">Harristemp</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 
 
 <div class="modal custom-modal fade bank-details" id="bank_details" role="dialog">
@@ -589,8 +360,7 @@
             </div>
             <div class="modal-footer">
                 <div class="bank-details-btn">
-                    <a href="javascript:void(0);" data-bs-dismiss="modal"
-                        class="btn bank-cancel-btn me-2">Cancel</a>
+                    <a href="javascript:void(0);" data-bs-dismiss="modal" class="btn bank-cancel-btn me-2">Cancel</a>
                     <a href="javascript:void(0);" class="btn bank-save-btn">Save Item</a>
                 </div>
             </div>
@@ -650,11 +420,11 @@
     </div>
 </div>
 <script>
-    $('#gst').click(function(){
+    $('#gst').click(function () {
         console.log('hi')
-    $('#showgst').toggle()
+        $('#showgst').toggle()
 
-})
+    })
 </script>
 <!-- end modal -->
 {% endblock %}
