@@ -17,8 +17,8 @@ class Customer(models.Model):
 class Product(models.Model):
     food_name = models.CharField(max_length=50)
     catagory = models.CharField(max_length=50)
-    priceper_head = models.CharField(max_length=50)
-    priceper_kg = models.CharField(max_length=50)
+    priceper_head = models.IntegerField()
+    priceper_kg = models.IntegerField()
     food_deatails = models.CharField(max_length=50)
 
     class Meta:
